@@ -154,20 +154,46 @@ button{font-family:inherit; cursor:pointer;}
 }
 .nav-links a:hover, .nav-links a.active{background:var(--mist); color:var(--blue);}
 .nav-cta{display:flex; align-items:center; gap:10px;}
-.nav-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; padding:8px;}
-.nav-toggle span{width:24px; height:2px; background:var(--navy); border-radius:2px;}
+.nav-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; padding:8px; cursor:pointer;}
+.nav-toggle span{width:24px; height:2px; background:var(--navy); border-radius:2px; transition:transform .25s var(--ease), opacity .25s var(--ease);}
+.nav-mobile-cta{display:none;}
 
 @media (max-width:960px){
+  .navbar{position:relative;}
   .nav-links{
-    position:fixed; inset:73px 0 0 0; background:#fff; flex-direction:column; align-items:stretch;
+    /* Note: .navbar uses backdrop-filter, which creates a containing block for
+       fixed-position descendants. That silently broke `position:fixed` here
+       (the menu was being sized/positioned relative to the ~73px-tall navbar
+       instead of the viewport). Using `position:absolute` anchored to the
+       navbar (its nearest positioned ancestor) fixes this reliably and also
+       removes the need to hardcode the header height. */
+    position:absolute; top:100%; left:0; right:0;
+    background:#fff; flex-direction:column; align-items:stretch;
     padding:16px 24px; gap:2px; transform:translateY(-12px); opacity:0; pointer-events:none;
-    transition:transform .3s var(--ease), opacity .3s var(--ease); border-top:1px solid var(--line);
-    max-height:calc(100vh - 73px); overflow:auto;
+    visibility:hidden;
+    transition:transform .3s var(--ease), opacity .3s var(--ease), visibility 0s linear .3s;
+    border-top:1px solid var(--line);
+    max-height:calc(100vh - 73px); overflow-y:auto; overflow-x:hidden;
+    z-index:250;
+    box-shadow:0 16px 32px rgba(15,26,58,.12);
   }
-  .nav-links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+  .nav-links.open{
+    transform:translateY(0); opacity:1; pointer-events:auto; visibility:visible;
+    transition:transform .3s var(--ease), opacity .3s var(--ease), visibility 0s linear 0s;
+  }
   .nav-links a{padding:14px 12px; border-bottom:1px solid var(--mist);}
   .nav-toggle{display:flex;}
+  .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.active span:nth-child(2){opacity:0;}
+  .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .nav-cta .btn-secondary{display:none;}
+  .nav-mobile-cta{
+    display:block; margin-top:10px; padding:14px 12px; text-align:center;
+    background:var(--orange); color:#fff; border-radius:var(--radius-pill); font-weight:600;
+  }
+}
+@media (max-width:960px) and (min-height:0){
+  body.nav-open{overflow:hidden;}
 }
 @media (max-width:400px){
   .btn{white-space:normal; text-align:center;}
