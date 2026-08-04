@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunline Solar Solutions | Premium Solar Energy in Dubai, UAE</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* CSS Variables & Global Resets */
+    :root {
+      --primary: #0f172a;       /* Dark Executive Navy */
+      --secondary: #1e293b;     /* Slate Dark */
+      --accent: #f59e0b;        /* Solar Amber/Gold */
+      --accent-hover: #d97706;
+      --green-energy: #10b981;  /* Eco Emerald */
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Common Layout & Typography */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-header .tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-hover);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-amber {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-amber:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-dark:hover {
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 85px;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i {
+      color: var(--accent);
+      font-size: 1.6rem;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* 1. Hero Section */
+    .hero {
+      position: relative;
+      padding: 110px 0 90px 0;
+      background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.88)), 
+                  url('https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content .subtitle {
+      color: var(--accent);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 3.3rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+      max-width: 600px;
+    }
+
+    /* Quick Action Card in Hero */
+    .hero-card {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-card h3 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+
+    /* 2. About Section */
+    .about {
+      background-color: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .founder-title {
+      color: var(--accent-hover);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .about-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .about-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .about-features i {
+      color: var(--green-energy);
+    }
+
+    /* 3. Solar Installation Services */
+    .services {
+      background-color: var(--light-bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-hover);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 4 & 5. Residential & Commercial Solutions */
+    .solutions {
+      background-color: #ffffff;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .solution-box {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .solution-box.commercial {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
+
+    .solution-box .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .solution-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .solution-box p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .solution-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .solution-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+    }
+
+    .solution-list i {
+      color: var(--accent);
+    }
+
+    /* 6. Savings Calculator UI */
+    .calculator-section {
+      background-color: var(--light-bg);
+    }
+
+    .calc-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .calc-inputs .form-group {
+      margin-bottom: 25px;
+    }
+
+    .calc-inputs label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .calc-inputs select, .calc-inputs input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+    }
+
+    .calc-result-box {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 35px 25px;
+      border-radius: 16px;
+      text-align: center;
+      border-top: 4px solid var(--accent);
+    }
+
+    .calc-result-box h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .calc-amount {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .calc-meta {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    /* 7. Installation Process */
+    .process-section {
+      background-color: #ffffff;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-icon {
+      width: 65px;
+      height: 65px;
+      background: var(--primary);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 20px auto;
+      font-weight: 700;
+    }
+
+    .process-step h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* 8. Projects */
+    .projects {
+      background-color: var(--light-bg);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-img {
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 25px;
+    }
+
+    .project-location {
+      font-size: 0.85rem;
+      color: var(--accent-hover);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .project-specs {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* 9. Testimonials */
+    .testimonials {
+      background-color: #ffffff;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: var(--light-bg);
+      padding: 35px 30px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    .quote-icon {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .client-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .client-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* 10. FAQ Section */
+    .faq {
+      background-color: var(--light-bg);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      border: 1px solid var(--border-color);
+    }
+
+    .faq-question {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 11. Contact Section */
+    .contact {
+      background-color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info-list {
+      margin-top: 25px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .contact-info-item i {
+      width: 45px;
+      height: 45px;
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-hover);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--primary);
+    }
+
+    .contact-info-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .form-box {
+      background: var(--light-bg);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      background: #ffffff;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      height: 110px;
+    }
+
+    /* 12. Footer */
+    footer {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 70px 0 25px 0;
+      border-top: 3px solid var(--accent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-about p {
+      color: #94a3b8;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 25px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .solutions-grid, .calc-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-sun"></i> SUNLINE <span>SOLAR</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button class="btn btn-amber">Get Free Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="subtitle">Clean Energy for the UAE</div>
+          <h1>Powering Dubai's Future With Solar Innovation</h1>
+          <p>Harness abundant sunlight with high-efficiency tier-1 solar panel systems for luxury villas, residential estates, and commercial towers across Dubai.</p>
+          <div class="btn-group">
+            <button class="btn btn-amber">Get Free Quote</button>
+            <button class="btn btn-outline"><i class="fa-solid fa-calculator"></i> Calculate Savings</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Switch to Clean Energy Today</h3>
+          <p>Schedule an on-site technical assessment with our expert Dubai engineers.</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button class="btn btn-amber" style="width: 100%;">Schedule Visit</button>
+            <button class="btn btn-outline" style="width: 100%;">Get Free Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1548611716-3001859b7b90?auto=format&fit=crop&w=800&q=80" alt="Sara Raza - Sunline Solar" />
+        </div>
+        <div class="about-text">
+          <div class="section-header" style="text-align: left; margin: 0 0 15px 0;">
+            <span class="tag">Leadership & Vision</span>
+            <h2>Sunline Solar Solutions</h2>
+          </div>
+          <div class="founder-title">Founded by Sara Raza</div>
+          <p>Headquartered in Business Bay, Dubai, Sunline Solar Solutions delivers world-class renewable energy infrastructure tailored to the climate of the UAE. Founded by Sara Raza, our mission is to accelerate sustainable urban living with zero compromise on aesthetic integration.</p>
+          <p>We handle every phase—from DEWA grid compliance and engineering permits to turnkey installation and long-term performance monitoring.</p>
+          <ul class="about-features">
+            <li><i class="fa-solid fa-circle-check"></i> DEWA Certified Solar Contractors</li>
+            <li><i class="fa-solid fa-circle-check"></i> High-Heat Resistant Tier-1 PV Modules</li>
+            <li><i class="fa-solid fa-circle-check"></i> 25-Year Performance Guarantee</li>
+          </ul>
+          <div class="btn-group">
+            <button class="btn btn-dark">Schedule Visit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Solar Installation Services -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Capabilities</span>
+        <h2>Solar Installation Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <h3>Rooftop PV Installation</h3>
+          <p>Turnkey rooftop solar PV systems engineered specifically for Dubai weather and maximum generation.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-battery-full"></i></div>
+          <h3>Battery Energy Storage</h3>
+          <p>Advanced lithium storage systems ensuring uninterrupted power supply during grid disruptions or night cycles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-charging-station"></i></div>
+          <h3>EV Charger Integration</h3>
+          <p>Seamlessly pair your solar rooftop with fast smart chargers for your electric vehicles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Maintenance & Washing</h3>
+          <p>Robotic cleaning and thermal imaging inspections to maintain top-tier array output despite desert dust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 & 5. Residential & Commercial Solutions -->
+  <section id="solutions" class="solutions section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Tailored Engineering</span>
+        <h2>Residential & Commercial Solutions</h2>
+      </div>
+      <div class="solutions-grid">
+        
+        <!-- Residential -->
+        <div class="solution-box">
+          <span class="badge">For Homeowners</span>
+          <h3>Residential Solar Systems</h3>
+          <p>Transform your luxury villa or estate into a self-sustaining eco-home while drastically dropping your DEWA bills.</p>
+          <ul class="solution-list">
+            <li><i class="fa-solid fa-check"></i> Elegant low-profile black frame panels</li>
+            <li><i class="fa-solid fa-check"></i> Real-time mobile app energy tracking</li>
+            <li><i class="fa-solid fa-check"></i> Average 60% to 80% DEWA utility reduction</li>
+          </ul>
+          <button class="btn btn-amber">Get Free Quote</button>
+        </div>
+
+        <!-- Commercial -->
+        <div class="solution-box commercial">
+          <span class="badge">For Enterprises</span>
+          <h3>Commercial Solar Installations</h3>
+          <p>Power your corporate HQ, warehouse, or retail complex with MW-scale rooftop and carport solar structures.</p>
+          <ul class="solution-list">
+            <li><i class="fa-solid fa-check"></i> Complete ESG compliance documentation</li>
+            <li><i class="fa-solid fa-check"></i> Reduced operational expenditure (OpEx)</li>
+            <li><i class="fa-solid fa-check"></i> Solar carports with shaded employee parking</li>
+          </ul>
+          <button class="btn btn-outline">Schedule Visit</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Savings Calculator UI -->
+  <section id="calculator" class="calculator-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Estimate ROI</span>
+        <h2>Solar Savings Calculator</h2>
+      </div>
+      <div class="calc-card">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="form-group">
+              <label>Property Type</label>
+              <select>
+                <option>Residential Villa (5,000 - 8,000 sq ft)</option>
+                <option>Large Estate (8,000+ sq ft)</option>
+                <option>Commercial Building / Warehouse</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Average Monthly DEWA Bill (AED)</label>
+              <input type="number" placeholder="e.g. 3,500" value="3500" />
+            </div>
+            <button class="btn btn-amber" style="width: 100%;"><i class="fa-solid fa-calculator"></i> Calculate Savings</button>
+          </div>
+          <div class="calc-result-box">
+            <h4>Estimated Annual Savings</h4>
+            <div class="calc-amount">28,500 AED</div>
+            <div class="calc-meta">Approximate Payback Period: 4.2 Years<br>Estimated 25-Year Carbon Reduction: 120 Tons</div>
+            <button class="btn btn-outline" style="border-color: #ffffff; color: #ffffff; width: 100%;">Get Free Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Installation Process -->
+  <section class="process-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">How It Works</span>
+        <h2>Our Installation Process</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-icon">1</div>
+          <h3>Site Assessment</h3>
+          <p>Shading analysis and structural roof integrity inspection in Dubai.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">2</div>
+          <h3>System Design</h3>
+          <p>Custom 3D CAD modeling and DEWA grid approval filings.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">3</div>
+          <h3>Precision Build</h3>
+          <p>Certified engineers install racking, tier-1 panels, and inverters.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">4</div>
+          <h3>Grid Connection</h3>
+          <p>Final meter testing, commissioning, and system handoff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Projects -->
+  <section id="projects" class="projects section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Portfolio</span>
+        <h2>Featured Dubai Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Emirates Hills Villa" />
+          </div>
+          <div class="project-body">
+            <div class="project-location">Emirates Hills, Dubai</div>
+            <div class="project-title">Luxury Villa Rooftop Solar</div>
+            <div class="project-specs">Capacity: 28 kWp | Annual Output: ~45,000 kWh</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=600&q=80" alt="Al Quoz Warehouse" />
+          </div>
+          <div class="project-body">
+            <div class="project-location">Al Quoz Industrial, Dubai</div>
+            <div class="project-title">Commercial Logistics Park</div>
+            <div class="project-specs">Capacity: 450 kWp | Annual Output: ~720,000 kWh</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Palm Jumeirah Residence" />
+          </div>
+          <div class="project-body">
+            <div class="project-location">Palm Jumeirah, Dubai</div>
+            <div class="project-title">Beachfront Estate System</div>
+            <div class="project-specs">Capacity: 35 kWp + Battery Backup</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Client Reviews</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Sara Raza and her engineering team were phenomenal. They took care of all DEWA approvals seamlessly. Our villa's electricity bill dropped by over 70%."</p>
+          <div class="client-name">Rashid Al-Maktoum</div>
+          <div class="client-title">Emirates Hills Resident</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Installed a 200kW system on our Business Bay commercial site. High professionalism, clean work, and delivered strictly on schedule."</p>
+          <div class="client-name">Claire Thompson</div>
+          <div class="client-title">Operations Director, Apex Logistics</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Sunline Solar provided high-end black panels that complement our modern architectural design without looking bulky."</p>
+          <div class="client-name">Tariq Mansoor</div>
+          <div class="client-title">Jumeirah Golf Estates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ Section -->
+  <section class="faq section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Are solar installations compliant with DEWA regulations?</div>
+          <div class="faq-answer">Yes, all Sunline Solar Solutions systems strictly follow DEWA’s Shams Dubai regulations and technical guidelines.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do panels handle Dubai's extreme summer heat and sand?</div>
+          <div class="faq-answer">We utilize high-temperature-rated Tier-1 panels engineered with specialized anti-dust coatings and offer scheduled cleaning services.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the typical warranty duration?</div>
+          <div class="faq-answer">Our solar panels come with a 25-year linear performance warranty and 10-year product warranty.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Get In Touch</span>
+        <h2>Contact Our Energy Advisors</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h3>Visit Our Business Bay HQ</h3>
+          <p style="color: var(--text-muted); margin-bottom: 25px;">Connect with Sara Raza and our team to explore clean energy solutions for your property.</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h4>Office Location</h4>
+                <p>Business Bay, Dubai, UAE</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+971 52 481 7326</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h4>Email Address</h4>
+                <p>hello@sunlinesolar.ae</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h4>Business Hours</h4>
+                <p>Monday to Saturday: 8 AM to 6 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <form onsubmit="return false;">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="e.g. Ahmed Hassan" />
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" class="form-control" placeholder="+971 50 000 0000" />
+            </div>
+            <div class="form-group">
+              <label>Property Location</label>
+              <input type="text" class="form-control" placeholder="e.g. Dubai Hills Estate" />
+            </div>
+            <div class="form-group">
+              <label>Message / Energy Goal</label>
+              <textarea class="form-control" placeholder="Tell us about your villa or commercial rooftop..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-amber" style="width: 100%;">Get Free Quote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo" style="color: #ffffff;">
+            <i class="fa-solid fa-sun"></i> SUNLINE <span>SOLAR</span>
+          </a>
+          <p>Sunline Solar Solutions, led by Sara Raza, is Dubai's trusted provider of premium rooftop solar arrays, storage, and DEWA grid integrations.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="#">Villa Solar PV</a></li>
+            <li><a href="#">Commercial Rooftops</a></li>
+            <li><a href="#">Battery Storage</a></li>
+            <li><a href="#">EV Chargers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Dubai Office</h4>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Business Bay, Dubai, UAE</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Ph: +971 52 481 7326</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem;">Email: hello@sunlinesolar.ae</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sunline Solar Solutions. All Rights Reserved. Owned by Sara Raza. Designed for Dubai, UAE.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

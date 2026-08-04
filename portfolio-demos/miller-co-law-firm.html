@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miller & Co. Law Firm | Premier Legal Services in New York</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* CSS Variables & Global Resets */
+    :root {
+      --primary-dark: #0b1325;   /* Deep Executive Navy */
+      --secondary-dark: #141e33; /* Dark Slate Navy */
+      --accent-gold: #c5a059;    /* Royal Gold */
+      --accent-hover: #b08b46;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Common Layout & Typography */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-header .tag {
+      display: inline-block;
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: var(--primary-dark);
+    }
+
+    .btn-gold:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent-gold);
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+    }
+
+    .btn-dark:hover {
+      background-color: var(--secondary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Sticky Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 19, 37, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 85px;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-gold);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* 1. Hero Section */
+    .hero {
+      position: relative;
+      padding: 120px 0;
+      background: linear-gradient(rgba(11, 19, 37, 0.85), rgba(11, 19, 37, 0.92)), 
+                  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content .subtitle {
+      color: var(--accent-gold);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+      max-width: 600px;
+    }
+
+    /* Quick Hero Card */
+    .hero-card {
+      background: rgba(20, 30, 51, 0.9);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 8px;
+      padding: 35px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .hero-card h3 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+
+    /* 2. About Firm */
+    .about-firm {
+      background-color: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    /* 3. Practice Areas */
+    .practice-areas {
+      background-color: var(--light-bg);
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .practice-card {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      border-top: 3px solid var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    .practice-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .practice-icon {
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+
+    .practice-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .practice-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 4. Attorney Profile */
+    .attorney-profile {
+      background-color: #ffffff;
+    }
+
+    .attorney-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .attorney-img img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .attorney-details h3 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+    }
+
+    .attorney-role {
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .attorney-bio {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .credentials-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .credentials-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .credentials-list i {
+      color: var(--accent-gold);
+    }
+
+    /* 5. Legal Process */
+    .process-section {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+    }
+
+    .process-section .section-header h2 {
+      color: #ffffff;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+    }
+
+    .process-card {
+      background: var(--secondary-dark);
+      padding: 35px 25px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+    }
+
+    .process-number {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .process-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* 6. Case Results */
+    .case-results {
+      background-color: var(--light-bg);
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .result-card {
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .result-amount {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .result-type {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .result-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* 7. Testimonials */
+    .testimonials {
+      background-color: #ffffff;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: var(--light-bg);
+      padding: 35px 30px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .quote-icon {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .client-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .client-type {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* 8. FAQ Section */
+    .faq {
+      background-color: var(--light-bg);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      border: 1px solid var(--border-color);
+    }
+
+    .faq-question {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 9 & 10. Consultation Form & Office Location */
+    .contact-section {
+      background-color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+    }
+
+    .form-box {
+      background: var(--light-bg);
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      background: #ffffff;
+      color: var(--text-dark);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .location-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info-list {
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .info-item i {
+      color: var(--accent-gold);
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    .info-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--primary-dark);
+    }
+
+    .info-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .map-placeholder {
+      background: #e2e8f0;
+      border-radius: 8px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #cbd5e1;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map-placeholder i {
+      font-size: 2.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    /* 11. Footer */
+    footer {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      padding: 70px 0 25px 0;
+      border-top: 3px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-about p {
+      color: #94a3b8;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 25px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .attorney-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Simplified static nav */
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">MILLER <span>& CO.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About Firm</a></li>
+        <li><a href="#practices">Practice Areas</a></li>
+        <li><a href="#attorney">Attorney Profile</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button class="btn btn-gold">Free Consultation</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="subtitle">Premier New York Counsel</div>
+          <h1>Unwavering Legal Defense & Corporate Guidance</h1>
+          <p>Protecting your corporate interests, high-stakes assets, and legal rights with sophisticated strategy and decades of trial experience in Manhattan.</p>
+          <div class="btn-group">
+            <button class="btn btn-gold">Free Consultation</button>
+            <button class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Attorney</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Request Immediate Assistance</h3>
+          <p>Speak directly with an experienced legal strategist regarding your case.</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button class="btn btn-gold" style="width: 100%;">Free Consultation</button>
+            <button class="btn btn-outline" style="width: 100%;"><i class="fa-solid fa-envelope"></i> Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Firm -->
+  <section id="about" class="about-firm section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Miller & Co. Law Office" />
+        </div>
+        <div class="about-text">
+          <div class="section-header" style="text-align: left; margin: 0 0 20px 0;">
+            <span class="tag">About Our Practice</span>
+            <h2>Decades of Uncompromising Legal Excellence</h2>
+          </div>
+          <p>Founded on Madison Avenue, Miller & Co. Law Firm has earned a reputation for formidable advocacy across New York State and federal courts. We represent high-net-worth individuals, corporations, and institutional clients facing complex legal challenges.</p>
+          <p>Our firm blends relentless trial preparation with pragmatic negotiation strategies to deliver favorable outcomes in high-stakes environments.</p>
+          <div style="margin-top: 30px;">
+            <button class="btn btn-dark">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Practice Areas -->
+  <section id="practices" class="practice-areas section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Legal Expertise</span>
+        <h2>Core Practice Areas</h2>
+      </div>
+      <div class="practice-grid">
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>Corporate Litigation</h3>
+          <p>Handling shareholder disputes, breach of contract claims, and complex commercial law affairs.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>White-Collar Defense</h3>
+          <p>Rigorous defense against federal inquiries, regulatory compliance audits, and financial charges.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-city"></i></div>
+          <h3>Commercial Real Estate</h3>
+          <p>Advising institutional developers and investors on acquisition, zoning, and leasing contracts.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Mergers & Acquisitions</h3>
+          <p>Structuring strategic corporate transactions, joint ventures, and legal due diligence.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Asset Protection</h3>
+          <p>Safeguarding family estates and executive wealth through robust legal structures.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon"><i class="fa-solid fa-gavel"></i></div>
+          <h3>Appellate Practice</h3>
+          <p>Representing clients in complex appeals before state and federal appellate tribunals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Attorney Profile -->
+  <section id="attorney" class="attorney-profile section-padding">
+    <div class="container">
+      <div class="attorney-grid">
+        <div class="attorney-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="David Miller - Founder" />
+        </div>
+        <div class="attorney-details">
+          <div class="section-header" style="text-align: left; margin: 0 0 15px 0;">
+            <span class="tag">Managing Partner</span>
+            <h2>David Miller</h2>
+          </div>
+          <div class="attorney-role">Founder & Lead Trial Counsel</div>
+          <p class="attorney-bio">With over 25 years of courtroom experience in New York City, David Miller leads the firm with a formidable record in complex litigation. A former federal prosecutor, he brings unmatched perspective to defending high-profile corporate clients and executives.</p>
+          <ul class="credentials-list">
+            <li><i class="fa-solid fa-circle-check"></i> J.D., Columbia Law School (Harlan Fiske Stone Scholar)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Admitted to the New York State Bar & U.S. District Courts (SDNY/EDNY)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Named Top 100 Trial Lawyers by National Trial Lawyers Association</li>
+          </ul>
+          <div class="btn-group">
+            <button class="btn btn-gold">Free Consultation</button>
+            <button class="btn btn-dark"><i class="fa-solid fa-phone"></i> Call Attorney</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Legal Process -->
+  <section class="process-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Strategic Approach</span>
+        <h2>Our Legal Process</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">01</div>
+          <h3>Case Evaluation</h3>
+          <p>In-depth analysis of evidence, contracts, and relevant statutory precedents.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">02</div>
+          <h3>Strategy Design</h3>
+          <p>Developing a customized roadmap tailored to mitigate risks and maximize outcomes.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">03</div>
+          <h3>Relentless Execution</h3>
+          <p>Filing precise motions, executing discovery, or conducting tactical settlement negotiations.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">04</div>
+          <h3>Resolution</h3>
+          <p>Securing verdict judgments, binding arbitration decisions, or advantageous settlements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Case Results -->
+  <section id="results" class="case-results section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Proven Performance</span>
+        <h2>Notable Case Results</h2>
+      </div>
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-amount">$45M+</div>
+          <div class="result-type">Commercial Breach Settlement</div>
+          <p class="result-desc">Secured full recovery for a global technology firm in a joint venture breach dispute.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-amount">Dismissed</div>
+          <div class="result-type">Federal Regulatory Probe</div>
+          <p class="result-desc">Achieved complete pre-indictment dismissal for a hedge fund executive.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-amount">$28M</div>
+          <div class="result-type">Real Estate Dispute</div>
+          <p class="result-desc">Favorable judgment for a Manhattan developer regarding land acquisition rights.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-amount">Vindicated</div>
+          <div class="result-type">Shareholder Squeeze-Out</div>
+          <p class="result-desc">Successfully defended minority partners in a high-value corporate restructuring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Client Trust</span>
+        <h2>Endorsements & Reviews</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"David Miller and his legal team navigated our cross-border litigation with absolute precision. Their strategic insightsaved our company millions."</p>
+          <div class="client-name">Robert Sterling</div>
+          <div class="client-type">CEO, Fintech Solutions NY</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"When facing complex federal inquiries, Miller & Co. provided calm, authoritative defense. Their reputation in SDNY is unmatched."</p>
+          <div class="client-name">Elena Rostova</div>
+          <div class="client-type">Managing Director</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Extremely sharp corporate counsel. They structured our multi-property real estate transaction in Manhattan without a single hitch."</p>
+          <div class="client-name">Marcus Vance</div>
+          <div class="client-type">Real Estate Investor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ Section -->
+  <section class="faq section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Information</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">What sets Miller & Co. apart from other New York firms?</div>
+          <div class="faq-answer">We offer partner-level attention to every case, combining the agility of a specialized boutique firm with big-firm trial firepower.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How are your legal fees structured?</div>
+          <div class="faq-answer">Depending on the matter, we utilize competitive hourly billing, retainer agreements, or structured milestone fees.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How quickly can I consult with an attorney?</div>
+          <div class="faq-answer">We offer immediate confidential evaluations for urgent corporate litigation and white-collar defense matters.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 & 10. Consultation Form & Office Location -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Get In Touch</span>
+        <h2>Schedule a Confidential Consultation</h2>
+      </div>
+      <div class="contact-grid">
+        
+        <!-- Consultation Form -->
+        <div class="form-box">
+          <form onsubmit="return false;">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="e.g. John Doe" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="form-control" placeholder="name@company.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" class="form-control" placeholder="+1 (212) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label>Practice Area / Inquiry Type</label>
+              <select class="form-control">
+                <option>Corporate Litigation</option>
+                <option>White-Collar Defense</option>
+                <option>Commercial Real Estate</option>
+                <option>Other Legal Counsel</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Brief Case Overview</label>
+              <textarea class="form-control" placeholder="Describe your legal matter..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Free Consultation</button>
+          </form>
+        </div>
+
+        <!-- Office Location Details -->
+        <div class="location-info">
+          <div>
+            <h3>Headquarters Location</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">Conveniently located in Midtown Manhattan for confidential client conferences.</p>
+            
+            <div class="info-list">
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Office Address</h4>
+                  <p>Madison Avenue, New York, NY</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h4>Direct Line</h4>
+                  <p>+1 212 555 3817</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Confidential Email</h4>
+                  <p>contact@millercolaw.com</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Monday to Friday: 8 AM to 6 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-group" style="margin-bottom: 25px;">
+              <button class="btn btn-dark"><i class="fa-solid fa-phone"></i> Call Attorney</button>
+              <button class="btn btn-outline">Contact Us</button>
+            </div>
+          </div>
+
+          <!-- Office Location Map Placeholder -->
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>New York Office Map Placeholder</h3>
+            <p>Madison Avenue, New York, NY</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Professional Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo">MILLER <span>& CO.</span></a>
+          <p>Miller & Co. Law Firm is a premier litigation and corporate law firm in New York, committed to zealous advocacy and tailored legal strategy for high-profile clients.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Firm</a></li>
+            <li><a href="#practices">Practice Areas</a></li>
+            <li><a href="#attorney">David Miller</a></li>
+            <li><a href="#results">Case Results</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Practices</h4>
+          <ul class="footer-links">
+            <li><a href="#">Corporate Litigation</a></li>
+            <li><a href="#">White-Collar Defense</a></li>
+            <li><a href="#">Commercial Real Estate</a></li>
+            <li><a href="#">Mergers & Acquisitions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Manhattan Office</h4>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Madison Avenue, New York, NY</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Ph: +1 212 555 3817</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem;">Email: contact@millercolaw.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Miller & Co. Law Firm. All Rights Reserved. Attorney Advertising. Prior results do not guarantee a similar outcome.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
