@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmed Khan - Certified Real Estate Consultant in Islamabad, Pakistan. Specializing in luxury villas, apartments, commercial properties, and investment advisory.">
+    <meta name="keywords" content="Real Estate Broker Islamabad, Property Consultant Islamabad, Luxury Villas CDA, Commercial Investment Pakistan, Ahmed Khan Real Estate">
+    <meta name="author" content="Ahmed Khan">
+    <title>Ahmed Khan | Certified Real Estate Consultant - Islamabad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           CORE DESIGN SYSTEM & VARIABLES
+           ========================================== */
+        :root {
+            --bg-body: #FFFFFF;
+            --bg-surface: #F8FAFC;
+            --bg-surface-elevated: #FFFFFF;
+            --bg-dark: #0B1325;
+            --bg-navy-card: #111C33;
+            
+            --primary-navy: #0F172A;
+            --primary-light: #1E293B;
+            
+            --accent-gold: #C5A059;
+            --accent-gold-hover: #B08C46;
+            --accent-gold-light: #F4EFE6;
+            --accent-gold-glow: rgba(197, 160, 89, 0.25);
+            
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --text-white: #FFFFFF;
+            --text-gold: #D4AF37;
+            
+            --border-color: #E2E8F0;
+            --border-gold: rgba(197, 160, 89, 0.3);
+            
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 16px 32px rgba(15, 23, 42, 0.12);
+            --shadow-gold: 0 10px 25px rgba(197, 160, 89, 0.2);
+            
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        /* RESET & BASE */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-navy);
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* REUSABLE LAYOUT COMPONENTS */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .subtitle-badge {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            background-color: var(--accent-gold-light);
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-gold);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .section-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        /* BUTTONS & UI */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+            color: var(--text-white);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #C5A059 0%, #B08C46 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(197, 160, 89, 0.35);
+        }
+
+        .btn-navy {
+            background-color: var(--primary-navy);
+            color: var(--text-white);
+        }
+
+        .btn-navy:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline-gold {
+            background-color: transparent;
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .btn-outline-gold:hover {
+            background-color: var(--accent-gold);
+            color: var(--text-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            border-color: rgba(255,255,255,0.3);
+            color: var(--text-white);
+        }
+
+        .btn-outline-white:hover {
+            border-color: var(--text-white);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--text-white);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1DA851;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+        }
+
+        /* GLASSMORPHISM EFFECTS */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: var(--radius-md);
+        }
+
+        .glass-card-dark {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: var(--radius-md);
+        }
+
+        /* ==========================================
+           HEADER & NAVIGATION
+           ========================================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            padding: 20px 0;
+            background-color: transparent;
+        }
+
+        .header.scrolled {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            box-shadow: var(--shadow-md);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #D4AF37, #C5A059);
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.3rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-white);
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-top: 3px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background-color: var(--primary-navy);
+            overflow: hidden;
+        }
+
+        .hero-bg-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.35) contrast(1.1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 60%, rgba(15,23,42,0.3) 100%);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: var(--text-white);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 36px;
+            max-width: 600px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 24px;
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-feature-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+
+        .hero-card {
+            padding: 32px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .hero-card-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .hero-card-title {
+            font-size: 1.5rem;
+            color: var(--text-white);
+            margin-bottom: 8px;
+        }
+
+        .hero-card-subtitle {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Quick Search Form inside Hero Card */
+        .hero-search-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .form-control option {
+            background-color: var(--primary-navy);
+            color: var(--text-white);
+        }
+
+        /* ==========================================
+           ABOUT SECTION
+           ========================================== */
+        .about {
+            background-color: var(--bg-body);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image-column {
+            position: relative;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 4/5;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: var(--primary-navy);
+            border: 2px solid var(--accent-gold);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            color: var(--text-white);
+        }
+
+        .experience-num {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .experience-lbl {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .about-bio {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .highlight-icon {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .highlight-title {
+            font-weight: 700;
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+        }
+
+        .highlight-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           SERVICES SECTION
+           ========================================== */
+        .services {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-surface-elevated);
+            padding: 40px 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            position: relative;
+            top: 0;
+        }
+
+        .service-card:hover {
+            top: -8px;
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-gold);
+        }
+
+        .service-icon-wrapper {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-gold-light);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-icon-wrapper {
+            background: var(--accent-gold);
+            color: var(--text-white);
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary-navy);
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card:hover .service-link {
+            color: var(--accent-gold-hover);
+            gap: 12px;
+        }
+
+        /* ==========================================
+           FEATURED PROPERTIES
+           ========================================== */
+        .properties {
+            background-color: var(--bg-body);
+        }
+
+        .properties-filter {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-navy);
+            color: var(--text-white);
+            border-color: var(--primary-navy);
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .property-card {
+            background: var(--bg-surface-elevated);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-gold);
+        }
+
+        .property-image-container {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .property-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .property-card:hover .property-img {
+            transform: scale(1.05);
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--primary-navy);
+            color: var(--text-white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .property-type-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            color: var(--accent-gold);
+            border: 1px solid var(--border-gold);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .property-price-tag {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            color: var(--text-white);
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .property-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .property-location {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .property-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .property-specs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .spec-item i {
+            color: var(--primary-navy);
+        }
+
+        /* ==========================================
+           WHY CHOOSE AHMED KHAN
+           ========================================== */
+        .why-choose {
+            background-color: var(--primary-navy);
+            color: var(--text-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose .section-title {
+            color: var(--text-white);
+        }
+
+        .why-choose .section-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: var(--bg-navy-card);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            padding: 36px 28px;
+            border-radius: var(--radius-md);
+            transition: var(--transition-smooth);
+        }
+
+        .why-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .why-number {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+
+        .why-title {
+            font-size: 1.2rem;
+            color: var(--text-white);
+            margin-bottom: 12px;
+        }
+
+        .why-desc {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           STATISTICS SECTION
+           ========================================== */
+        .stats-section {
+            background: linear-gradient(135deg, #111C33 0%, #0F172A 100%);
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ==========================================
+           TESTIMONIALS
+           ========================================== */
+        .testimonials {
+            background-color: var(--bg-surface);
+        }
+
+        .testimonials-wrapper {
+            position: relative;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--bg-surface-elevated);
+            padding: 48px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .testimonial-card.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quote-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            opacity: 0.4;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 28px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .client-avatar-placeholder {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary-navy);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .client-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .client-role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .rating-stars {
+            color: #FFB800;
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .dot-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .dot-btn.active {
+            background: var(--accent-gold);
+            width: 32px;
+            border-radius: 12px;
+        }
+
+        /* ==========================================
+           CONSULTATION CTA SECTION
+           ========================================== */
+        .cta-section {
+            background: linear-gradient(rgba(15,23,42,0.92), rgba(15,23,42,0.92)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
+            padding: 80px 0;
+            color: var(--text-white);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.8rem;
+            color: var(--text-white);
+            margin-bottom: 20px;
+        }
+
+        .cta-desc {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 36px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ==========================================
+           FAQ SECTION
+           ========================================== */
+        .faq {
+            background-color: var(--bg-body);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: var(--bg-surface-elevated);
+            border: none;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-question:hover {
+            color: var(--accent-gold);
+        }
+
+        .faq-icon {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            color: var(--accent-gold);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            background-color: var(--bg-surface);
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px 24px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           CONTACT SECTION
+           ========================================== */
+        .contact {
+            background-color: var(--bg-surface);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+        }
+
+        .contact-info-card {
+            background: var(--primary-navy);
+            color: var(--text-white);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-gold);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info-header {
+            margin-bottom: 32px;
+        }
+
+        .contact-info-title {
+            font-size: 1.8rem;
+            color: var(--text-white);
+            margin-bottom: 12px;
+        }
+
+        .contact-info-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .contact-details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-detail-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail-val {
+            font-size: 1rem;
+            color: var(--text-white);
+            font-weight: 500;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-form-container {
+            background: var(--bg-surface-elevated);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-full {
+            grid-column: span 2;
+        }
+
+        .form-input-light {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input-light:focus {
+            border-color: var(--accent-gold);
+            background: var(--bg-body);
+            box-shadow: 0 0 0 3px var(--accent-gold-glow);
+        }
+
+        .form-label-light {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        .footer {
+            background-color: var(--bg-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding-top: 80px;
+            padding-bottom: 30px;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand-desc {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            color: var(--text-white);
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-link:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon:hover {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--text-white);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* ==========================================
+           BACK TO TOP & FLOATING WHATSAPP
+           ========================================== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition-smooth);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #1DA851;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background-color: var(--primary-navy);
+            color: var(--accent-gold);
+            border: 1px solid var(--border-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+            z-index: 998;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-gold);
+            color: var(--text-white);
+        }
+
+        /* ==========================================
+           MODAL FOR PROPERTY DETAILS / BOOKING
+           ========================================== */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 19, 37, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+            padding: 20px;
+        }
+
+        .modal-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: var(--bg-body);
+            width: 100%;
+            max-width: 650px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-gold);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .modal-backdrop.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            background: var(--primary-navy);
+            color: var(--text-white);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            color: var(--text-white);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 28px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--primary-navy);
+            color: var(--text-white);
+            border-left: 4px solid var(--accent-gold);
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transform: translateX(150%);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* ==========================================
+           RESPONSIVE BREAKPOINTS
+           ========================================== */
+        @media (max-width: 1024px) {
+            .hero-container, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .services-grid, .properties-grid, .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--primary-navy);
+                flex-direction: column;
+                padding: 100px 30px 40px 30px;
+                transition: var(--transition-smooth);
+                box-shadow: var(--shadow-lg);
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .header-cta .btn {
+                display: none;
+            }
+
+            .services-grid, .properties-grid, .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-full {
+                grid-column: span 1;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER / NAVIGATION
+         ========================================== -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-mark">AK</div>
+                <div class="logo-text">
+                    <span class="logo-title">AHMED KHAN</span>
+                    <span class="logo-subtitle">Real Estate Consultant</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#why-me" class="nav-link">Why Choose Me</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="header-cta">
+                <button class="btn btn-gold" onclick="openModal('Book a Consultation', 'Please fill in your details to schedule a private advisory session with Ahmed Khan.')">
+                    <i class="fa-regular fa-calendar-check"></i> Book Consultation
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg-wrapper">
+            <!-- PLACEHEADER IMAGE LABEL: Luxury Islamabad Real Estate Banner -->
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80" alt="[Placeholder: Luxury Islamabad Skyline & Villas]" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="subtitle-badge">Islamabad's Premier Property Broker</div>
+                <h1 class="hero-title">Exclusive Real Estate Solutions in <span>Islamabad</span></h1>
+                <p class="hero-description">
+                    Guiding high-net-worth investors, buyers, and sellers through premier CDA sectors, DHA, and Bahria Town with transparency and 8+ years of proven market authority.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#properties" class="btn btn-gold">
+                        <i class="fa-solid fa-building-user"></i> View Properties
+                    </a>
+                    <button class="btn btn-outline-white" onclick="openModal('Book Consultation', 'Schedule a face-to-face or virtual meeting with Ahmed Khan.')">
+                        <i class="fa-regular fa-calendar"></i> Schedule Call
+                    </button>
+                    <a href="https://wa.me/923001234567?text=Hello%20Ahmed,%20I%20am%20interested%20in%20buying/investing%20in%20Islamabad%20property." target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Direct
+                    </a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature-item">
+                        <div class="hero-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="hero-feature-text">100% CDA & Legal Verified Properties</div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="hero-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="hero-feature-text">Data-Driven Yield & ROI Guidance</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Quick Finder Card -->
+            <div class="hero-card glass-card-dark">
+                <div class="hero-card-header">
+                    <h3 class="hero-card-title">Property Finder</h3>
+                    <p class="hero-card-subtitle">Search curated Islamabad listings</p>
+                </div>
+                <form class="hero-search-form" onsubmit="handleSearch(event)">
+                    <div class="form-group">
+                        <label class="form-label">Property Purpose</label>
+                        <select class="form-control" id="searchPurpose">
+                            <option value="buy">Buy Property</option>
+                            <option value="rent">Rent Property</option>
+                            <option value="invest">Investment Advisory</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" id="searchCategory">
+                            <option value="all">All Categories</option>
+                            <option value="villas">Luxury Villas</option>
+                            <option value="apartments">Modern Apartments</option>
+                            <option value="commercial">Commercial Hubs</option>
+                            <option value="plots">Residential Plots</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Preferred Location</label>
+                        <select class="form-control" id="searchLocation">
+                            <option value="all">All Capital Sectors</option>
+                            <option value="f7-f8">Sector F-6 / F-7 / F-8</option>
+                            <option value="e7">Sector E-7 / E-11</option>
+                            <option value="dha">DHA Phase 2 & 5</option>
+                            <option value="bahria">Bahria Town Phase 7/8</option>
+                            <option value="blue-area">Blue Area Commercial</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 10px;">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search Portfolio
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT AHMED KHAN
+         ========================================== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-column">
+                    <div class="about-image-wrapper">
+                        <!-- PLACEHOLDER IMAGE LABEL: Ahmed Khan Professional Portrait -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Ahmed Khan Real Estate Consultant Portrait]" class="about-img">
+                    </div>
+                    <div class="experience-badge">
+                        <div class="experience-num">8+</div>
+                        <div class="experience-lbl">Years Experience<br>In Capital Real Estate</div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="subtitle-badge">Certified Real Estate Broker</div>
+                    <h2 class="section-title">Personalized Property Advisory Rooted in Trust & Market Precision</h2>
+                    <p class="about-bio">
+                        Welcome. I am <strong>Ahmed Khan</strong>, a dedicated luxury property broker and investment consultant operating exclusively in Islamabad. Unlike multi-tiered agencies where clients get passed around to junior agents, I offer direct, highly tailored end-to-end consultancy.
+                    </p>
+                    <p class="about-bio">
+                        Over the past 8 years, I have facilitated high-value transactions across Sector F-6, F-7, E-7, DHA Islamabad, and Blue Area. My core philosophy is built on technical due diligence, transparent pricing, and maximum privacy for high-net-worth buyers and overseas Pakistanis.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check highlight-icon"></i>
+                            <div>
+                                <div class="highlight-title">CDA & Legal Vetting</div>
+                                <div class="highlight-desc">100% verified documentation before deal closure.</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check highlight-icon"></i>
+                            <div>
+                                <div class="highlight-title">Overseas Client Desk</div>
+                                <div class="highlight-desc">Seamless remote power of attorney & bank transfers.</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check highlight-icon"></i>
+                            <div>
+                                <div class="highlight-title">High ROI Portfolios</div>
+                                <div class="highlight-desc">Data-backed capital appreciation & rental yields.</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check highlight-icon"></i>
+                            <div>
+                                <div class="highlight-title">Confidentiality Assured</div>
+                                <div class="highlight-desc">Discreet off-market listings for luxury sellers.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; align-items: center; margin-top: 20px;">
+                        <button class="btn btn-navy" onclick="openModal('Request Advisory Profile', 'Enter your contact info to receive Ahmed Khan\'s advisory portfolio via WhatsApp/Email.')">
+                            Download Profile Summary
+                        </button>
+                        <a href="#contact" class="btn btn-outline-gold">Direct Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES
+         ========================================== -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">Bespoke Advisory</div>
+                <h2 class="section-title">Specialized Services Rendered With Precision</h2>
+                <p class="section-description">Whether buying a personal residence or expanding a commercial portfolio, benefit from expert end-to-end guidance.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="service-title">Buying Residential Property</h3>
+                    <p class="service-desc">
+                        Access premium villas, plots, and luxury penthouses in Sector F-6, F-7, E-7, Gulberg Greens, and DHA. Comprehensive location evaluation and title deed verification included.
+                    </p>
+                    <a href="#contact" class="service-link">Consult on Buying <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="service-title">Selling & Listing Advisory</h3>
+                    <p class="service-desc">
+                        Get realistic market valuations, premium staging consultation, professional digital marketing, and access to a qualified pool of private buyers for rapid deal closure.
+                    </p>
+                    <a href="#contact" class="service-link">List Your Property <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="service-title">Commercial Investment Guidance</h3>
+                    <p class="service-desc">
+                        Strategic acquisition of shops, corporate offices, and high-yielding rental spaces in Blue Area, I-8 Markaz, and DHA Commercial hubs with strong rental yields.
+                    </p>
+                    <a href="#contact" class="service-link">Explore Commercial <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="service-title">Property Valuation & Audit</h3>
+                    <p class="service-desc">
+                        Unbiased, realistic market pricing reports based on recent transaction data, CDA zoning laws, and upcoming infrastructure developments in Islamabad.
+                    </p>
+                    <a href="#contact" class="service-link">Request Valuation <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="service-title">Luxury Rental Assistance</h3>
+                    <p class="service-desc">
+                        Connecting diplomats, corporate executives, and high-profile expatriates with fully furnished, secure luxury residences in Sector F & E sectors.
+                    </p>
+                    <a href="#contact" class="service-link">Find Luxury Rental <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="service-title">Documentation & Legal Guidance</h3>
+                    <p class="service-desc">
+                        Complete assistance with CDA transfer processes, tax filing obligations (FBR), Power of Attorney execution, and property mutation paperwork.
+                    </p>
+                    <a href="#contact" class="service-link">Legal Inquiry <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED PROPERTIES
+         ========================================== -->
+    <section class="properties section-padding" id="properties">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">Curated Listings</div>
+                <h2 class="section-title">Featured Islamabad Properties</h2>
+                <p class="section-description">Handpicked, fully vetted residential and commercial options available for immediate acquisition.</p>
+            </div>
+
+            <div class="properties-filter">
+                <button class="filter-btn active" onclick="filterProperties('all')">All Listings</button>
+                <button class="filter-btn" onclick="filterProperties('villas')">Villas</button>
+                <button class="filter-btn" onclick="filterProperties('apartments')">Apartments</button>
+                <button class="filter-btn" onclick="filterProperties('commercial')">Commercial</button>
+                <button class="filter-btn" onclick="filterProperties('plots')">Plots</button>
+            </div>
+
+            <div class="properties-grid" id="propertiesContainer">
+                <!-- Property Card 1 -->
+                <div class="property-card" data-category="villas">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: Sector F-7 Luxury Villa Image -->
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Modern Luxury Villa Sector F-7]" class="property-img">
+                        <div class="property-badge">Exclusive</div>
+                        <div class="property-type-badge">Villa</div>
+                        <div class="property-price-tag">PKR 28.5 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector F-7/2, Islamabad</div>
+                        <h3 class="property-title">Brand New 500 Sq Yd Modern Designer Villa</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+                            <div class="spec-item"><i class="fa-solid fa-bath"></i> 7 Baths</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 1 Kanal</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('Brand New 500 Sq Yd Modern Designer Villa', 'PKR 28.5 Crore', 'Sector F-7/2, Islamabad', '6 Beds, 7 Baths, Italian Kitchen, Basement Home Theater, Swimming Pool, CDA Verified Title.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card" data-category="apartments">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: Luxury Apartment Complex Image -->
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: High-Rise Luxury Apartment Sector E-11]" class="property-img">
+                        <div class="property-badge">Hot Deal</div>
+                        <div class="property-type-badge">Apartment</div>
+                        <div class="property-price-tag">PKR 4.2 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector E-11/2, Islamabad</div>
+                        <h3 class="property-title">3-Bedroom Corner Luxury Penthouse Apartment</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+                            <div class="spec-item"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 2,400 Sq Ft</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('3-Bedroom Corner Luxury Penthouse Apartment', 'PKR 4.2 Crore', 'Sector E-11/2, Islamabad', 'Panormic Margalla Hills View, Dedicated Basement Parking, Smart Home System, High Rental Yield.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card" data-category="commercial">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: Blue Area Commercial Hub Image -->
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Blue Area Commercial Building Office Space]" class="property-img">
+                        <div class="property-badge">High Yield</div>
+                        <div class="property-type-badge">Commercial</div>
+                        <div class="property-price-tag">PKR 9.8 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Blue Area, Islamabad</div>
+                        <h3 class="property-title">Prime Commercial Office Space in Corporate Tower</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-building"></i> Floor 4</div>
+                            <div class="spec-item"><i class="fa-solid fa-chart-line"></i> 8% ROI</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 1,850 Sq Ft</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('Prime Commercial Office Space in Corporate Tower', 'PKR 9.8 Crore', 'Blue Area, Islamabad', 'Rented out to Multinational Tenant. High capital growth area, reserved executive car parking.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card" data-category="villas">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: DHA Islamabad Villa Image -->
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Modern Spanish Villa DHA Phase 2]" class="property-img">
+                        <div class="property-badge">Featured</div>
+                        <div class="property-type-badge">Villa</div>
+                        <div class="property-price-tag">PKR 14.5 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> DHA Phase 2, Islamabad</div>
+                        <h3 class="property-title">1 Kanal Modern Spanish Style House</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+                            <div class="spec-item"><i class="fa-solid fa-bath"></i> 6 Baths</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 1 Kanal</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('1 Kanal Modern Spanish Style House', 'PKR 14.5 Crore', 'DHA Phase 2, Islamabad', 'Solid Ash Wood Work, Imported Marble Flooring, Double Height Ceiling Lobby, Gated Community Security.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 5 -->
+                <div class="property-card" data-category="plots">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: Residential Plot Plot Image -->
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Residential Plot Sector F-6/1]" class="property-img">
+                        <div class="property-badge">Rare Find</div>
+                        <div class="property-type-badge">Plot</div>
+                        <div class="property-price-tag">PKR 35.0 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector F-6/1, Islamabad</div>
+                        <h3 class="property-title">2 Kanal Prime Corner Residential Plot</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-compass"></i> Corner</div>
+                            <div class="spec-item"><i class="fa-solid fa-road"></i> 60ft Road</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 2 Kanal</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('2 Kanal Prime Corner Residential Plot', 'PKR 35.0 Crore', 'Sector F-6/1, Islamabad', 'Clear CDA Allotment Letter, Solid Ground, Direct Owner Deal, Close to Margalla Road.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 6 -->
+                <div class="property-card" data-category="villas">
+                    <div class="property-image-container">
+                        <!-- PLACEHOLDER IMAGE LABEL: Bahria Town Villa Image -->
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="[Placeholder: Contemporary Villa Bahria Town Phase 8]" class="property-img">
+                        <div class="property-badge">Best Value</div>
+                        <div class="property-type-badge">Villa</div>
+                        <div class="property-price-tag">PKR 6.8 Crore</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Bahria Town Phase 8, Islamabad</div>
+                        <h3 class="property-title">10 Marla Brand New Luxury Smart House</h3>
+                        <div class="property-specs">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                            <div class="spec-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 10 Marla</div>
+                        </div>
+                        <button class="btn btn-outline-gold" style="width: 100%;" onclick="openPropertyDetails('10 Marla Brand New Luxury Smart House', 'PKR 6.8 Crore', 'Bahria Town Phase 8, Islamabad', 'Smart Locks, Solar Power Ready, Double Servant Quarter, Modern Architecture, Ready to Move.')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         WHY CHOOSE AHMED KHAN
+         ========================================== -->
+    <section class="why-choose section-padding" id="why-me">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">The Advantage</div>
+                <h2 class="section-title">Why Discerning Clients Choose Ahmed Khan</h2>
+                <p class="section-description">A commitment to professional integrity, market transparency, and personalized execution.</p>
+            </div>
+
+            <div class="why-grid">
+                <!-- Card 1 -->
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3 class="why-title">Trusted Advisor Model</h3>
+                    <p class="why-desc">
+                        You deal exclusively with Ahmed Khan. No junior assistants or unverified sub-agents. Every conversation and document is personally vetted by an expert.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3 class="why-title">100% Verified Listings</h3>
+                    <p class="why-desc">
+                        Zero fake ads or inflated market prices. All listed properties undergo rigorous title verification at the Capital Development Authority (CDA) or relevant housing societies.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3 class="why-title">Quick & Responsive Service</h3>
+                    <p class="why-desc">
+                        Fast turnarounds on property viewings, legal due diligence reports, and market inquiries. Dedicated priority desk for Overseas Pakistanis across time zones.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3 class="why-title">Strategic Investment Guidance</h3>
+                    <p class="why-desc">
+                        Data-centric financial planning for real estate investments. Gain insights on upcoming infrastructure projects, rental yield projections, and tax optimization.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="why-card">
+                    <div class="why-number">05</div>
+                    <h3 class="why-title">Transparent Negotiation Process</h3>
+                    <p class="why-desc">
+                        Direct face-to-face meetings arranged between genuine buyers and genuine sellers. Zero hidden markups or unethical commission structures.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="why-card">
+                    <div class="why-number">06</div>
+                    <h3 class="why-title">Deep Local Market Knowledge</h3>
+                    <p class="why-desc">
+                        8+ years of localized expertise in Islamabad's micro-markets, zoning regulations, sector-wise demand shifts, and private off-market opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         STATISTICS
+         ========================================== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">150+</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="300">300+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="8">8+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS
+         ========================================== -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">Client Endorsements</div>
+                <h2 class="section-title">What High-Net-Worth Buyers Say</h2>
+                <p class="section-description">Real feedback from local residents, investors, and overseas Pakistanis who found success with Ahmed Khan.</p>
+            </div>
+
+            <div class="testimonials-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card active">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">
+                        "As an overseas Pakistani living in the UK, buying a property in Islamabad felt daunting due to scam risks. Ahmed Khan made the entire transaction seamless. He verified the CDA allotment letter for my F-7 villa personally and handled the power of attorney flawlessly."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar-placeholder">TA</div>
+                        <div class="client-details">
+                            <span class="client-name">Tariq Abbasi</span>
+                            <span class="client-role">Overseas Investor (UK) • Sector F-7 Villa Buyer</span>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">
+                        "Ahmed Khan is the most transparent property consultant in Islamabad. He advised me AGAINST buying a hype-driven commercial project and redirected my capital into Blue Area, which now yields a steady 8.5% annual return. Truly a long-term strategic partner."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar-placeholder">SM</div>
+                        <div class="client-details">
+                            <span class="client-name">Dr. Sarah Malik</span>
+                            <span class="client-role">Commercial Investor • Blue Area Office Owner</span>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">
+                        "Selling our family home in Sector E-7 was an emotional process. Ahmed managed the sale with extreme privacy and brought only genuine, pre-vetted buyers. We closed at a top market price in under 3 weeks without any public hassle."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar-placeholder">FA</div>
+                        <div class="client-details">
+                            <span class="client-name">Faisal Aziz</span>
+                            <span class="client-role">Property Seller • Sector E-7, Islamabad</span>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">
+                        "I was looking for a modern 1-Kanal villa in DHA Phase 2. Ahmed showed me three exceptional off-market options that weren't on public sites. His negotiation skills saved us millions during final transfer pricing."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar-placeholder">ZC</div>
+                        <div class="client-details">
+                            <span class="client-name">Zubair Chaudhry</span>
+                            <span class="client-role">Resident • DHA Phase 2 Homeowner</span>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">
+                        "Punctual, articulate, and deeply familiar with CDA bylaws. Ahmed assisted our diplomatic firm in securing a high-security embassy-grade rental in F-6. Unmatched professionalism in the capital."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar-placeholder">MK</div>
+                        <div class="client-details">
+                            <span class="client-name">Marilyn King</span>
+                            <span class="client-role">Corporate Client • Sector F-6 Diplomatic Lessee</span>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="dot-btn active" onclick="setTestimonial(0)" aria-label="Testimonial 1"></button>
+                    <button class="dot-btn" onclick="setTestimonial(1)" aria-label="Testimonial 2"></button>
+                    <button class="dot-btn" onclick="setTestimonial(2)" aria-label="Testimonial 3"></button>
+                    <button class="dot-btn" onclick="setTestimonial(3)" aria-label="Testimonial 4"></button>
+                    <button class="dot-btn" onclick="setTestimonial(4)" aria-label="Testimonial 5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONSULTATION CALL TO ACTION
+         ========================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="subtitle-badge" style="background: rgba(197, 160, 89, 0.2); border-color: var(--accent-gold);">Private Advisory</div>
+                <h2 class="cta-title">Ready to Make a Secure Real Estate Move in Islamabad?</h2>
+                <p class="cta-desc">Book a confidential face-to-face meeting at our Blue Area office or schedule a virtual advisory call today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-gold" onclick="openModal('Book Advisory Consultation', 'Schedule your 1-on-1 private session with Ahmed Khan.')">
+                        <i class="fa-regular fa-calendar-days"></i> Schedule Meeting
+                    </button>
+                    <a href="https://wa.me/923001234567" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Chat via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FREQUENTLY ASKED QUESTIONS
+         ========================================== -->
+    <section class="faq section-padding" id="faq">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">Knowledge Hub</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Clear answers to crucial property acquisition questions in the federal capital.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I verify if a property in Islamabad has a clear CDA title?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Verification involves conducting an Allotment / Transfer verification process directly at the Capital Development Authority (CDA) main office. Ahmed Khan conducts thorough background checks, verifying NDC (No Demand Certificate), site layout approvals, and title deeds prior to any token payment.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can Overseas Pakistanis buy or sell property without flying to Pakistan?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, absolutely. Overseas Pakistanis can complete transactions through a legally executed Special or General Power of Attorney (POA), attested by the Embassy/High Commission of Pakistan in their residing country, and subsequently attested by the Ministry of Foreign Affairs (MOFA) in Pakistan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the typical taxes & duties involved in buying real estate?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Taxes depend on your status as an FBR Filer or Non-Filer. Key taxes include Advance Income Tax (Section 236K for buyers, Section 236C for sellers), Stamp Duty, CDA Transfer Fee, and Municipal Corporation taxes. Ahmed Khan provides an itemized tax breakdown before deal finalization.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Which Islamabad sectors currently offer the best investment yield?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            For steady rental yield, commercial units in Blue Area and luxury apartments in Sector E-11/F-11 are top performers. For long-term capital appreciation, residential plots in CDA sectors like C-15, C-16, and DHA Phase 5 show significant growth potential.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Why work with an independent broker like Ahmed Khan instead of an agency?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Working directly with an experienced consultant guarantees personal accountability, direct access to high-value negotiations, zero middleman markups, and strict privacy—factors often diluted in large commercial agencies with high agent turnover.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION
+         ========================================== -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="subtitle-badge">Get In Touch</div>
+                <h2 class="section-title">Initiate a Confidential Discussion</h2>
+                <p class="section-description">Reach out today for property inquiries, site visits, or private investment portfolio reviews.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info-card">
+                    <div class="contact-info-header">
+                        <h3 class="contact-info-title">Contact Information</h3>
+                        <p class="contact-info-desc">Direct line to Ahmed Khan's executive desk.</p>
+                    </div>
+
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Phone & Call</span>
+                                <span class="contact-detail-val">+92 300 1234567</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">WhatsApp Direct</span>
+                                <span class="contact-detail-val">+92 300 1234567</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Email Address</span>
+                                <span class="contact-detail-val">ahmed@isbpropertyconsultant.pk</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Executive Office</span>
+                                <span class="contact-detail-val">Suite 402, Executive Heights, Blue Area, Islamabad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PLACEHOLDER IMAGE LABEL: Map Location Placeholder -->
+                    <div class="map-placeholder">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80" alt="[Placeholder: Blue Area Islamabad Map Location]">
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-container">
+                    <h3 style="font-size: 1.5rem; color: var(--primary-navy); margin-bottom: 20px;">Send a Direct Message</h3>
+                    
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-grid">
+                            <div>
+                                <label class="form-label-light">Your Name *</label>
+                                <input type="text" class="form-input-light" placeholder="e.g. Faisal Mahmood" required>
+                            </div>
+
+                            <div>
+                                <label class="form-label-light">Phone / WhatsApp *</label>
+                                <input type="tel" class="form-input-light" placeholder="+92 300 0000000" required>
+                            </div>
+
+                            <div>
+                                <label class="form-label-light">Email Address</label>
+                                <input type="email" class="form-input-light" placeholder="name@domain.com">
+                            </div>
+
+                            <div>
+                                <label class="form-label-light">Interest Type</label>
+                                <select class="form-input-light">
+                                    <option>Buying Property</option>
+                                    <option>Selling Property</option>
+                                    <option>Investment Advisory</option>
+                                    <option>Property Valuation</option>
+                                    <option>Rental Assistance</option>
+                                </select>
+                            </div>
+
+                            <div class="form-full">
+                                <label class="form-label-light">Preferred Sector / Location</label>
+                                <input type="text" class="form-input-light" placeholder="e.g. Sector F-7, DHA Phase 2, Blue Area">
+                            </div>
+
+                            <div class="form-full">
+                                <label class="form-label-light">Your Requirements / Message *</label>
+                                <textarea class="form-input-light" rows="4" placeholder="Mention budget range, bedrooms, or specific queries..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Info -->
+                <div>
+                    <a href="#home" class="logo">
+                        <div class="logo-mark">AK</div>
+                        <div class="logo-text">
+                            <span class="logo-title">AHMED KHAN</span>
+                            <span class="logo-subtitle">Real Estate Consultant</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Providing high-net-worth individuals, investors, and overseas Pakistanis with transparent, legally vetted, and high-yielding real estate solutions in Islamabad.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/923001234567" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Ahmed Khan</a></li>
+                        <li><a href="#properties" class="footer-link">Featured Properties</a></li>
+                        <li><a href="#why-me" class="footer-link">Why Choose Me</a></li>
+                        <li><a href="#faq" class="footer-link">Property FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-title">Specializations</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="footer-link">Luxury Villas CDA</a></li>
+                        <li><a href="#services" class="footer-link">Commercial Offices Blue Area</a></li>
+                        <li><a href="#services" class="footer-link">DHA & Bahria Properties</a></li>
+                        <li><a href="#services" class="footer-link">Overseas Legal Guidance</a></li>
+                        <li><a href="#services" class="footer-link">Valuation Reports</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="footer-title">Islamabad Office</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(255,255,255,0.7);">
+                        Suite 402, Executive Heights, Blue Area, Islamabad, Pakistan.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600;">
+                        Direct: +92 300 1234567
+                    </p>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 8px;">
+                        Mon - Sat: 10:00 AM - 7:00 PM
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="currentYear"></span> Ahmed Khan Real Estate Consultant. All Rights Reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-link" onclick="alert('Privacy Policy: All client discussions and personal data remain strictly confidential.')">Privacy Policy</a>
+                    <a href="#" class="footer-link" onclick="alert('Terms of Service: Properties subject to prior sale or market price updates.')">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/923001234567?text=Hello%20Ahmed,%20I%20would%20like%20to%20inquire%20about%20a%20property%20in%20Islamabad." class="floating-whatsapp" target="_blank" aria-label="Direct WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back To Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================
+         GENERIC MODAL POPUP
+         ========================================== -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Inquiry / Booking</h3>
+                <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                    Please leave your contact info below.
+                </p>
+                <form onsubmit="handleModalSubmit(event)">
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div>
+                            <label class="form-label-light">Full Name *</label>
+                            <input type="text" class="form-input-light" required placeholder="e.g. Kamran Malik">
+                        </div>
+                        <div>
+                            <label class="form-label-light">Phone / WhatsApp Number *</label>
+                            <input type="tel" class="form-input-light" required placeholder="+92 300 0000000">
+                        </div>
+                        <div>
+                            <label class="form-label-light">Additional Details / Schedule Time</label>
+                            <textarea class="form-input-light" rows="3" placeholder="Preferred date, budget, or specific requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 10px;">
+                            Confirm Submission
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
+        <span id="toastMsg">Inquiry sent successfully! Ahmed Khan will reach out shortly.</span>
+    </div>
+
+    <!-- ==========================================
+         VANILLA JAVASCRIPT LOGIC
+         ========================================== -->
+    <script>
+        // 1. Dynamic Year Update
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 2. Header Scroll Effect
+        const header = document.getElementById('header');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 3. Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.querySelector('i').classList.remove('fa-xmark');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // 4. Property Category Filtering
+        function filterProperties(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.property-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 5. Testimonial Slider System
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot-btn');
+
+        function setTestimonial(index) {
+            testimonials[currentTestimonial].classList.remove('active');
+            dots[currentTestimonial].classList.remove('active');
+            
+            currentTestimonial = index;
+            
+            testimonials[currentTestimonial].classList.add('active');
+            dots[currentTestimonial].classList.add('active');
+        }
+
+        // Auto rotate testimonials
+        setInterval(() => {
+            let next = (currentTestimonial + 1) % testimonials.length;
+            setTestimonial(next);
+        }, 7000);
+
+        // 6. Accordion for FAQ
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                
+                // Toggle active class
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // 7. Modal System
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+
+        function openModal(title, description) {
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalBackdrop.classList.add('active');
+        }
+
+        function closeModal() {
+            modalBackdrop.classList.remove('active');
+        }
+
+        function openPropertyDetails(title, price, location, features) {
+            openModal(`Property Details: ${title}`, `Price: ${price} | Location: ${location} \n Key Features: ${features}`);
+        }
+
+        // Close modal on outside click
+        modalBackdrop.addEventListener('click', (e) => {
+            if (e.target === modalBackdrop) {
+                closeModal();
+            }
+        });
+
+        // 8. Form Handlers & Toast Notifications
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast("Thank you! Your message has been sent to Ahmed Khan.");
+            e.target.reset();
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            showToast("Request received! Ahmed Khan will contact you shortly.");
+            e.target.reset();
+        }
+
+        function handleSearch(e) {
+            e.preventDefault();
+            const category = document.getElementById('searchCategory').value;
+            if(category !== 'all') {
+                filterProperties(category);
+                document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+                showToast(`Filtered listings by ${category}`);
+            } else {
+                document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+                showToast('Showing all available listings.');
+            }
+        }
+    </script>
+</body>
+</html>
