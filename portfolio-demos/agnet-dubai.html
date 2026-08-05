@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Morgan - Premier Luxury Real Estate Consultant in Dubai, UAE. Specializing in high-end residential homes, bespoke advisory, and seamless property acquisitions.">
+    <meta name="keywords" content="Dubai Luxury Real Estate, Residential Homes Dubai, Daniel Morgan Real Estate, Property Consultant Dubai">
+    <meta name="author" content="Daniel Morgan">
+    <title>Daniel Morgan | Luxury Real Estate Consultant Dubai</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           1. DESIGN SYSTEM & CSS VARIABLES
+           ========================================== */
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --bg-tertiary: #F1F3F5;
+            
+            --navy-primary: #0B132B;
+            --navy-secondary: #1C2541;
+            --navy-light: #2E3A59;
+            
+            --gold-primary: #C5A059;
+            --gold-hover: #B08C45;
+            --gold-light: #F4EBE1;
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #A37F35 100%);
+            
+            --text-main: #1C2541;
+            --text-muted: #6C757D;
+            --text-white: #FFFFFF;
+            
+            --border-color: #E9ECEF;
+            --border-gold: rgba(197, 160, 89, 0.3);
+            
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            
+            --shadow-sm: 0 4px 12px rgba(11, 19, 43, 0.04);
+            --shadow-md: 0 8px 24px rgba(11, 19, 43, 0.08);
+            --shadow-lg: 0 16px 40px rgba(11, 19, 43, 0.12);
+            --shadow-gold: 0 8px 25px rgba(197, 160, 89, 0.25);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* ==========================================
+           2. RESET & BASE STYLES
+           ========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy-primary);
+            line-height: 1.25;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ==========================================
+           3. REUSABLE UTILITIES & COMPONENTS
+           ========================================== */
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--gold-primary); }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 64px auto;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.75rem;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-transform: uppercase;
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--text-white);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(197, 160, 89, 0.4);
+            color: var(--text-white);
+        }
+
+        .btn-outline-gold {
+            border-color: var(--gold-primary);
+            color: var(--navy-primary);
+            background: transparent;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold-primary);
+            color: var(--text-white);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #FFFFFF;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+            color: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-navy {
+            background: var(--navy-primary);
+            color: var(--text-white);
+        }
+
+        .btn-navy:hover {
+            background: var(--navy-secondary);
+            color: var(--text-white);
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================
+           4. NAVIGATION BAR
+           ========================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 24px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled .brand-name {
+            color: var(--navy-primary);
+        }
+
+        .brand-title {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--navy-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold-primary) !important;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--text-white);
+            cursor: pointer;
+        }
+
+        .navbar.scrolled .mobile-toggle {
+            color: var(--navy-primary);
+        }
+
+        /* ==========================================
+           5. HERO SECTION
+           ========================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(11, 19, 43, 0.55), rgba(11, 19, 43, 0.75)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding-top: 100px;
+            color: var(--text-white);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 18px;
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--gold-primary);
+            backdrop-filter: blur(5px);
+            border-radius: 50px;
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--text-white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: var(--gold-primary);
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* ==========================================
+           6. ABOUT THE AGENT SECTION
+           ========================================== */
+        .about {
+            background: var(--bg-primary);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 620px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-experience-badge {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background: var(--navy-primary);
+            color: var(--text-white);
+            padding: 32px;
+            border-radius: var(--radius-md);
+            border-left: 5px solid var(--gold-primary);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .exp-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--gold-primary);
+            line-height: 1;
+            display: block;
+        }
+
+        .exp-text {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .about-bio {
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--navy-primary);
+        }
+
+        .trust-item i {
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+        }
+
+        .areas-served {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--gold-primary);
+            margin-top: 32px;
+        }
+
+        .areas-served-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--navy-primary);
+            margin-bottom: 8px;
+        }
+
+        .areas-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .area-tag {
+            font-size: 0.85rem;
+            background: var(--bg-primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ==========================================
+           7. FEATURED HOMES SECTION
+           ========================================== */
+        .featured-homes {
+            background: var(--bg-secondary);
+        }
+
+        .homes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 32px;
+        }
+
+        .home-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .home-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-gold);
+        }
+
+        .home-card-image-wrapper {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .home-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .home-card:hover .home-card-image {
+            transform: scale(1.05);
+        }
+
+        .home-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(11, 19, 43, 0.85);
+            color: var(--text-white);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            backdrop-filter: blur(4px);
+        }
+
+        .home-price {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: var(--gold-gradient);
+            color: var(--text-white);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .home-card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .home-location {
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .home-title {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .home-description {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .home-features {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--navy-primary);
+            font-weight: 600;
+        }
+
+        .feature-item i {
+            color: var(--gold-primary);
+        }
+
+        .home-card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        /* ==========================================
+           8. WHY WORK WITH ME SECTION
+           ========================================== */
+        .why-me {
+            background: var(--bg-primary);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .why-card {
+            padding: 40px 32px;
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            top: 0;
+        }
+
+        .why-card:hover {
+            top: -8px;
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-gold);
+        }
+
+        .why-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gold-light);
+            color: var(--gold-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon {
+            background: var(--gold-gradient);
+            color: var(--text-white);
+        }
+
+        .why-title {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        /* ==========================================
+           9. BUYING PROCESS SECTION
+           ========================================== */
+        .process {
+            background: var(--navy-primary);
+            color: var(--text-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process .section-title {
+            color: var(--text-white);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: rgba(197, 160, 89, 0.3);
+            z-index: 1;
+        }
+
+        .process-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--navy-secondary);
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 24px auto;
+            transition: var(--transition);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .process-step:hover .step-number {
+            background: var(--gold-gradient);
+            color: var(--text-white);
+            transform: scale(1.1);
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            color: var(--text-white);
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ==========================================
+           10. TESTIMONIALS SECTION
+           ========================================== */
+        .testimonials {
+            background: var(--bg-secondary);
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+            padding: 20px 0 40px 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .testimonial-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 22px);
+            min-width: 350px;
+            scroll-snap-align: start;
+            background: var(--bg-primary);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .quote-icon {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            opacity: 0.3;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--navy-secondary);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .client-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold-primary);
+        }
+
+        .client-name {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .client-role {
+            font-size: 0.8rem;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .stars {
+            color: #FFD166;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        /* ==========================================
+           11. STATISTICS SECTION
+           ========================================== */
+        .stats {
+            background: linear-gradient(rgba(11, 19, 43, 0.9), rgba(11, 19, 43, 0.9)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            padding: 80px 0;
+            color: var(--text-white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           12. FAQ SECTION
+           ========================================== */
+        .faq {
+            background: var(--bg-primary);
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 16px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--navy-primary);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--gold-primary);
+        }
+
+        .faq-icon {
+            font-size: 1rem;
+            color: var(--gold-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding-bottom: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 24px;
+        }
+
+        /* ==========================================
+           13. CONTACT SECTION
+           ========================================== */
+        .contact {
+            background: var(--bg-secondary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 64px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--navy-primary);
+            color: var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-card-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-card-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy-primary);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 220px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=800&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-overlay {
+            background: rgba(11, 19, 43, 0.7);
+            color: var(--text-white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .contact-form {
+            background: var(--bg-primary);
+            padding: 48px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy-primary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--navy-primary);
+            transition: var(--transition);
+            background: var(--bg-secondary);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            background: var(--bg-primary);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ==========================================
+           14. FOOTER
+           ========================================== */
+        .footer {
+            background: var(--navy-primary);
+            color: var(--text-white);
+            padding-top: 80px;
+            padding-bottom: 40px;
+            border-top: 3px solid var(--gold-primary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .brand-name {
+            color: var(--text-white);
+            margin-bottom: 12px;
+        }
+
+        .footer-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            max-width: 320px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--navy-secondary);
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            background: var(--gold-gradient);
+            color: var(--text-white);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            color: var(--text-white);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--gold-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--gold-primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .legal-link {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .legal-link:hover {
+            color: var(--gold-primary);
+        }
+
+        /* ==========================================
+           15. BACK TO TOP BUTTON
+           ========================================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-gold);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-50%);
+            background: var(--navy-primary);
+        }
+
+        /* ==========================================
+           16. RESPONSIVE BREAKPOINTS
+           ========================================== */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 3.2rem; }
+            .process-timeline { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+            .process-timeline::before { display: none; }
+            .testimonial-card { flex: 0 0 calc(50% - 16px); }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-container { padding: 0; }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--navy-primary);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+            .nav-menu.active { right: 0; }
+            .nav-link { color: var(--text-white) !important; font-size: 1.1rem; }
+            .mobile-toggle { display: block; z-index: 1001; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+            .about-experience-badge { right: 20px; bottom: -20px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .section-title { font-size: 2.2rem; }
+            .homes-grid { grid-template-columns: 1fr; }
+            .process-timeline { grid-template-columns: 1fr; }
+            .testimonial-card { flex: 0 0 100%; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .hero-buttons .btn { width: 100%; }
+            .nav-cta { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="brand-logo">
+                <span class="brand-name">DANIEL MORGAN</span>
+                <span class="brand-title">Luxury Real Estate Consultant</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#homes" class="nav-link">Featured Homes</a></li>
+                <li><a href="#why-me" class="nav-link">Why Work With Me</a></li>
+                <li><a href="#process" class="nav-link">Buying Process</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.8rem;">Book Advisory</a>
+            </div>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         1. HERO SECTION
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-crown"></i> Premier Dubai Residential Specialist
+                </div>
+                <h1 class="hero-title">Find Your Perfect <span>Residential Home</span> in Dubai</h1>
+                <p class="hero-description">Bespoke advisory, ultra-exclusive listings, and seamless transactions for discerning buyers and sellers seeking private, high-value residences.</p>
+                <div class="hero-buttons">
+                    <a href="#homes" class="btn btn-gold"><i class="fa-solid fa-house"></i> View Homes</a>
+                    <a href="#contact" class="btn btn-outline-gold" style="color: #FFF; border-color: #FFF;"><i class="fa-solid fa-calendar-check"></i> Book Consultation</a>
+                    <a href="https://wa.me/971500000000" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         2. ABOUT THE AGENT
+         ========================================== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <!-- IMAGE PLACEHOLDER: Agent Portrait -->
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Daniel Morgan - Luxury Real Estate Consultant" class="about-image">
+                    <div class="about-experience-badge">
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">Years of Dubai<br>Market Mastery</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Personal Real Estate Advisory</span>
+                    <h2 class="section-title">Elevating Dubai’s Residential Real Estate Experience</h2>
+                    <p class="about-bio">I am Daniel Morgan, a dedicated private property consultant specializing exclusively in luxury residential homes across Dubai’s most coveted enclaves. Over the past decade, I have curated an unparalleled portfolio of high-value residences for international buyers, high-net-worth investors, and local families seeking exceptional living spaces.</p>
+                    <p class="about-bio">Unlike commercial brokers or multi-tier agencies, my approach is deeply personal. I provide single-point accountability, discreet negotiation, and data-backed market analysis to ensure every acquisition or sale exceeds client expectations.</p>
+
+                    <div class="trust-indicators">
+                        <div class="trust-item"><i class="fa-solid fa-circle-check"></i> 100% Private Advisory</div>
+                        <div class="trust-item"><i class="fa-solid fa-circle-check"></i> RERA Certified Expert</div>
+                        <div class="trust-item"><i class="fa-solid fa-circle-check"></i> Bespoke Portfolio Access</div>
+                        <div class="trust-item"><i class="fa-solid fa-circle-check"></i> End-to-End Deal Closing</div>
+                    </div>
+
+                    <div class="areas-served">
+                        <div class="areas-served-title">Prime Residential Zones Served</div>
+                        <div class="areas-tags">
+                            <span class="area-tag">Palm Jumeirah</span>
+                            <span class="area-tag">Emirates Hills</span>
+                            <span class="area-tag">Dubai Hills Estate</span>
+                            <span class="area-tag">Jumeirah Golf Estates</span>
+                            <span class="area-tag">Al Barari</span>
+                            <span class="area-tag">Mohammed Bin Rashid City</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         3. FEATURED HOMES
+         ========================================== -->
+    <section class="featured-homes section-padding" id="homes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Exclusive Listings</span>
+                <h2 class="section-title">Featured Residential Homes</h2>
+                <p>Handpicked private residences offering architectural excellence, prime locations, and sophisticated luxury living in Dubai.</p>
+            </div>
+
+            <div class="homes-grid">
+
+                <!-- Home Card 1 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 1 -->
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="The Sanctuary Haven" class="home-card-image">
+                        <span class="home-tag">Signature Residence</span>
+                        <div class="home-price">AED 28,500,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Palm Jumeirah</div>
+                        <h3 class="home-title">The Beachfront Sanctuary</h3>
+                        <p class="home-description">Direct private beach access, custom contemporary architecture, and breathtaking panoramic skyline views.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 7 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 9,800 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20The%20Beachfront%20Sanctuary" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 2 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 2 -->
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Golf Course Residence" class="home-card-image">
+                        <span class="home-tag">Exclusive Listing</span>
+                        <div class="home-price">AED 34,000,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Emirates Hills</div>
+                        <h3 class="home-title">Emirates Hills Manor</h3>
+                        <p class="home-description">Overlooking the championship golf course, featuring private manicured gardens and an underground spa.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 7 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 9 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 14,200 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Emirates%20Hills%20Manor" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 3 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 3 -->
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Parkside Residence" class="home-card-image">
+                        <span class="home-tag">Modern Living</span>
+                        <div class="home-price">AED 19,500,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Dubai Hills Estate</div>
+                        <h3 class="home-title">Parkside Modern Residence</h3>
+                        <p class="home-description">Sleek minimalist aesthetics, expansive floor-to-ceiling glass, and seamless indoor-outdoor living spaces.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 6 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 7,500 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Parkside%20Modern%20Residence" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 4 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 4 -->
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Al Barari Oasis" class="home-card-image">
+                        <span class="home-tag">Private Retreat</span>
+                        <div class="home-price">AED 22,000,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Al Barari</div>
+                        <h3 class="home-title">Botanical Oasis Residence</h3>
+                        <p class="home-description">Surrounded by lush greenery and private streams, providing unrivaled peace and total discretion.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 7 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 11,000 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Botanical%20Oasis%20Residence" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 5 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 5 -->
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Jumeirah Golf Estate Home" class="home-card-image">
+                        <span class="home-tag">Golf Frontage</span>
+                        <div class="home-price">AED 16,800,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Jumeirah Golf Estates</div>
+                        <h3 class="home-title">The Earth Course Estate</h3>
+                        <p class="home-description">Mediterranean architectural classic with custom wine cellar, private infinity pool, and golf course views.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 6 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 8,200 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20The%20Earth%20Course%20Estate" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 6 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 6 -->
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="MBR City Residence" class="home-card-image">
+                        <span class="home-tag">Waterfront Luxury</span>
+                        <div class="home-price">AED 26,000,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> MBR City</div>
+                        <h3 class="home-title">Crystal Lagoon Mansion</h3>
+                        <p class="home-description">Direct access to the crystal lagoon, smart-home automated systems, and private rooftop terrace.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 8 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 10,500 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Crystal%20Lagoon%20Mansion" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 7 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 7 -->
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Jumeirah Island Home" class="home-card-image">
+                        <span class="home-tag">Renovated Classic</span>
+                        <div class="home-price">AED 18,200,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Jumeirah Islands</div>
+                        <h3 class="home-title">Waterfront Island Residence</h3>
+                        <p class="home-description">Fully upgraded interior with European finishes, private swimming pool, and pristine water body surrounding.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 6,800 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Waterfront%20Island%20Residence" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Card 8 -->
+                <div class="home-card">
+                    <div class="home-card-image-wrapper">
+                        <!-- IMAGE PLACEHOLDER: Luxury Residence 8 -->
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="Palm Jumeirah Custom Home" class="home-card-image">
+                        <span class="home-tag">Off-Market Rare</span>
+                        <div class="home-price">AED 45,000,000</div>
+                    </div>
+                    <div class="home-card-content">
+                        <div class="home-location"><i class="fa-solid fa-location-dot"></i> Palm Jumeirah</div>
+                        <h3 class="home-title">Royal Frond Architectural Masterpiece</h3>
+                        <p class="home-description">Bespoke ultra-luxury home crafted by world-renowned architects. Private jetty, basement cinema, and infinity pool.</p>
+                        <div class="home-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 7 Beds</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 10 Baths</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 16,000 Sq Ft</div>
+                        </div>
+                        <div class="home-card-actions">
+                            <a href="#contact" class="btn btn-outline-gold" style="padding: 10px; font-size: 0.8rem;">View Details</a>
+                            <a href="https://wa.me/971500000000?text=I%20am%20interested%20in%20Royal%20Frond%20Masterpiece" target="_blank" class="btn btn-whatsapp" style="padding: 10px; font-size: 0.8rem;"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4. WHY WORK WITH ME
+         ========================================== -->
+    <section class="why-me section-padding" id="why-me">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">The Private Advantage</span>
+                <h2 class="section-title">Why Work With Me</h2>
+                <p>Delivering high-value residential outcomes through personalized representation, absolute confidentiality, and deep local market expertise.</p>
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3 class="why-title">Trusted Advisor</h3>
+                    <p>I build long-term relationships based on integrity, providing unbiased advice tailored specifically to your residential goals.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+                    <h3 class="why-title">Verified Listings</h3>
+                    <p>Every home in my portfolio undergoes rigorous legal and structural verification before being presented to clients.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="why-title">Fast Response</h3>
+                    <p>Direct accessibility with zero middle layers. Expect real-time updates and swift answers to all inquiries.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="why-title">Personal Consultation</h3>
+                    <p>Tailored physical or virtual discovery sessions to map out your exact aesthetic, financial, and lifestyle requirements.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3 class="why-title">Negotiation Expertise</h3>
+                    <p>Over a decade of closing high-value deals ensures your financial positioning is optimized, whether buying or selling.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="why-title">Deep Market Knowledge</h3>
+                    <p>Access off-market opportunities, real historical transaction data, and accurate future appreciation metrics.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. BUYING PROCESS
+         ========================================== -->
+    <section class="process section-padding" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Seamless Acquisition</span>
+                <h2 class="section-title">The Residential Buying Process</h2>
+                <p style="color: rgba(255,255,255,0.8);">A structured, stress-free pathway from initial vision to key handover.</p>
+            </div>
+
+            <div class="process-timeline">
+
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Search & Curation</h3>
+                    <p class="step-desc">Targeted discovery session to identify verified prime homes matching your exact lifestyle parameters.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Private Visit</h3>
+                    <p class="step-desc">Discreet personal viewings scheduled at your convenience with comprehensive architectural briefings.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Strategic Negotiation</h3>
+                    <p class="step-desc">Structuring the offer to secure optimal financial terms and favorable closing timelines.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Documentation</h3>
+                    <p class="step-desc">Managing MOU drafting, Trustee registration, and all Dubai Land Department requirements.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">Move In & Transfer</h3>
+                    <p class="step-desc">Title deed issuance, key handover, and post-acquisition concierge setup for immediate occupancy.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6. CLIENT TESTIMONIALS
+         ========================================== -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Endorsements</span>
+                <h2 class="section-title">Endorsed by Discerning Homeowners</h2>
+                <p>Read experiences from private buyers and sellers who trusted my advisory in Dubai.</p>
+            </div>
+
+            <div class="testimonial-slider">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Daniel sourced an extraordinary off-market villa in Palm Jumeirah for my family. His discretion, speed, and understanding of residential luxury made the process seamless."</p>
+                    </div>
+                    <div class="client-info">
+                        <!-- IMAGE PLACEHOLDER: Client Avatar 1 -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Alexander Wright" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Alexander Wright</h4>
+                            <span class="client-role">Homebuyer, Palm Jumeirah</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Selling our family estate in Emirates Hills required absolute privacy and precise valuation. Daniel delivered a qualified buyer within 3 weeks at full asking price."</p>
+                    </div>
+                    <div class="client-info">
+                        <!-- IMAGE PLACEHOLDER: Client Avatar 2 -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Elena Rostova</h4>
+                            <span class="client-role">Home Seller, Emirates Hills</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Daniel's knowledge of Dubai Hills Estate is unmatched. He saved us significant time by filtering out unsuitable properties and focusing strictly on premier homes."</p>
+                    </div>
+                    <div class="client-info">
+                        <!-- IMAGE PLACEHOLDER: Client Avatar 3 -->
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus Sterling" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Marcus Sterling</h4>
+                            <span class="client-role">Homebuyer, Dubai Hills</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Professional, punctual, and highly skilled in contract negotiation. Daniel handled every transfer detail with the Dubai Land Department effortlessly."</p>
+                    </div>
+                    <div class="client-info">
+                        <!-- IMAGE PLACEHOLDER: Client Avatar 4 -->
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Sophie Al-Mansoor" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Sophie Al-Mansoor</h4>
+                            <span class="client-role">Homebuyer, Al Barari</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Working with a single specialized consultant rather than a large corporate agency made a world of difference. Highly recommended for luxury residential transactions."</p>
+                    </div>
+                    <div class="client-info">
+                        <!-- IMAGE PLACEHOLDER: Client Avatar 5 -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="David Chen" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">David Chen</h4>
+                            <span class="client-role">Homebuyer, MBR City</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         7. STATISTICS
+         ========================================== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Homes Sold</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         8. FAQ SECTION
+         ========================================== -->
+    <section class="faq section-padding" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p>Everything you need to know about purchasing or selling a luxury home in Dubai.</p>
+            </div>
+
+            <div class="faq-wrapper">
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you handle properties other than residential homes?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. I specialize exclusively in high-value residential homes (single-family luxury residences, beachfront properties, and standalone estates). This focused approach ensures unmatched market depth in the luxury living segment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can non-UAE residents buy residential homes in Dubai?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, international buyers and non-residents can purchase freehold residential properties in designated prime areas across Dubai with 100% ownership rights.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What fees are involved when buying a home in Dubai?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard transaction fees include the Dubai Land Department (DLD) transfer fee (4%), Trustee office registration fees, and agency advisory commission. I provide a complete fee breakdown prior to any offer placement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do off-market residential listings work?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many ultra-high-net-worth sellers prefer not to list their homes publicly. Through my private network, I gain access to confidential listings and share them directly with verified buyers under non-disclosure agreements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does the home purchase process take?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A standard cash transaction typically takes 2 to 4 weeks from MOU signing to title deed transfer. Mortgage transactions generally require 4 to 6 weeks depending on bank approval speed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         9. CONTACT SECTION
+         ========================================== -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <div>
+                        <span class="section-subtitle">Get In Touch</span>
+                        <h2 class="section-title">Schedule a Private Consultation</h2>
+                        <p>Whether you are seeking to acquire a signature residential home or wish to discuss the discreet sale of your property, I am at your service.</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="contact-card-title">Direct Line</div>
+                            <div class="contact-card-text">+971 50 000 0000</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-card-title">Private Email</div>
+                            <div class="contact-card-text">daniel@morganluxury.ae</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="contact-card-title">Advisory Office</div>
+                            <div class="contact-card-text">Emirates Towers, Level 32, Dubai, UAE</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/971500000000" target="_blank" class="btn btn-whatsapp" style="align-self: flex-start;">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Directly
+                    </a>
+
+                    <!-- MAP PLACEHOLDER -->
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <i class="fa-solid fa-map-pin" style="color: var(--gold-primary);"></i> Dubai, United Arab Emirates
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form UI -->
+                <div class="contact-form">
+                    <form id="advisoryForm" onsubmit="event.preventDefault(); alert('Thank you for reaching out. Daniel Morgan will contact you shortly.');">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="e.g., Lord Jonathan Sterling" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="e.g., jonathan@sterling.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+971 50 000 0000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="service">Primary Interest</label>
+                            <select id="service" class="form-control">
+                                <option value="buy">Buying a Luxury Home</option>
+                                <option value="sell">Selling a Luxury Home</option>
+                                <option value="advisory">General Investment Advisory</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Requirements</label>
+                            <textarea id="message" class="form-control" placeholder="Describe preferred location, bedrooms, or special requests..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Request Advisory Call
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         10. FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#" class="brand-logo" style="margin-bottom: 16px;">
+                        <span class="brand-name">DANIEL MORGAN</span>
+                        <span class="brand-title">Luxury Real Estate Consultant</span>
+                    </a>
+                    <p class="footer-desc">Independent private real estate consultant delivering bespoke residential property services across Dubai's most prestigious communities.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="#hero" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About Daniel</a>
+                        <a href="#homes" class="footer-link">Featured Homes</a>
+                        <a href="#why-me" class="footer-link">Why Work With Me</a>
+                        <a href="#process" class="footer-link">Buying Process</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Prime Enclaves</h4>
+                    <div class="footer-links">
+                        <a href="#homes" class="footer-link">Palm Jumeirah</a>
+                        <a href="#homes" class="footer-link">Emirates Hills</a>
+                        <a href="#homes" class="footer-link">Dubai Hills Estate</a>
+                        <a href="#homes" class="footer-link">Al Barari</a>
+                        <a href="#homes" class="footer-link">Jumeirah Golf Estates</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Private Contact</h4>
+                    <div class="footer-links">
+                        <span class="footer-link"><i class="fa-solid fa-phone text-gold"></i> +971 50 000 0000</span>
+                        <span class="footer-link"><i class="fa-solid fa-envelope text-gold"></i> daniel@morganluxury.ae</span>
+                        <span class="footer-link"><i class="fa-solid fa-location-dot text-gold"></i> Dubai, United Arab Emirates</span>
+                        <span class="footer-link"><i class="fa-solid fa-award text-gold"></i> RERA Permit #48291</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="currentYear"></span> Daniel Morgan Real Estate Consultant. All Rights Reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">RERA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- ==========================================
+         FRONTEND JAVASCRIPT
+         ========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Dynamic Footer Year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // 2. Sticky Navbar Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Mobile Menu Toggle
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu when link clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // 4. FAQ Accordion Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQs
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // 5. Back to Top Button visibility & click
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 6. Smooth Scroll for internal anchors
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const navbarHeight = 80;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
