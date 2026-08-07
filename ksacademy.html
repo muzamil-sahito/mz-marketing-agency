@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karachi Scholars Academy | Quality Education in Karachi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & ROOT STYLES
+       ========================================================================== */
+    :root {
+      --primary: #1a56db;
+      --primary-hover: #1e429f;
+      --primary-light: #ebf5ff;
+      --sky-blue: #e1effe;
+      --accent: #faca15;
+      --accent-hover: #e3a008;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+      --bg-white: #ffffff;
+      --bg-offwhite: #f9fafb;
+      --bg-cream: #fdfbf7;
+      --border-color: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --transition: all 0.3s ease;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-bg {
+      background-color: var(--bg-offwhite);
+    }
+
+    .section-bg-cream {
+      background-color: var(--bg-cream);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--bg-white);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-white);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--text-dark);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: var(--bg-white);
+      box-shadow: var(--shadow-sm);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .header-top {
+      background-color: var(--primary-hover);
+      color: var(--bg-white);
+      padding: 8px 0;
+      font-size: 0.85rem;
+    }
+
+    .header-top-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top-info {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-top-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background-color: var(--primary);
+      color: var(--bg-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-white) 0%, var(--primary-light) 100%);
+      padding: 80px 0 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 6px solid var(--bg-white);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      opacity: 0.2;
+      bottom: -20px;
+      left: -20px;
+      z-index: 1;
+    }
+
+    /* ==========================================================================
+       STATS HIGHLIGHTS
+       ========================================================================== */
+    .stats-section {
+      margin-top: -50px;
+      position: relative;
+      z-index: 10;
+      padding: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: var(--bg-white);
+      padding: 30px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      border-bottom: 4px solid var(--primary);
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-50px);
+    }
+
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .value-box {
+      background: var(--primary-light);
+      padding: 15px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+    }
+
+    .value-box h4 {
+      font-size: 1rem;
+      color: var(--primary);
+    }
+
+    /* ==========================================================================
+       PRINCIPAL'S MESSAGE
+       ========================================================================== */
+    .principal-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .principal-img {
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      width: 100%;
+      height: 350px;
+    }
+
+    .principal-content blockquote {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .principal-name {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .principal-title {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .signature {
+      font-family: 'Caveat', cursive, sans-serif;
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-top: 15px;
+    }
+
+    /* ==========================================================================
+       ACADEMICS & PROGRAMS
+       ========================================================================== */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      padding: 30px 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .program-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .program-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .program-content {
+      padding: 25px;
+    }
+
+    /* ==========================================================================
+       ADMISSIONS
+       ========================================================================== */
+    .admissions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .process-list {
+      margin-top: 20px;
+    }
+
+    .process-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .process-num {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: var(--bg-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .form-card {
+      background: var(--bg-white);
+      padding: 35px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+    }
+
+    .alert-success {
+      display: none;
+      padding: 15px;
+      background-color: #def7ec;
+      color: #03543f;
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================================================
+       FACULTY
+       ========================================================================== */
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .faculty-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .faculty-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .faculty-info {
+      padding: 20px;
+    }
+
+    .faculty-name {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .faculty-role {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       GALLERY & LIGHTBOX
+       ========================================================================== */
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: var(--bg-white);
+      border-color: var(--primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 240px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+      color: var(--bg-white);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox-content {
+      max-width: 900px;
+      max-height: 80vh;
+      border-radius: var(--radius-sm);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: var(--bg-white);
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       WHY CHOOSE US & TESTIMONIALS
+       ========================================================================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 15px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-white);
+      padding: 30px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .demo-tag {
+      font-size: 0.75rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ==========================================================================
+       CTA & CONTACT
+       ========================================================================== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+      color: var(--bg-white);
+      text-align: center;
+      padding: 60px 0;
+      border-radius: var(--radius-lg);
+    }
+
+    .cta-section h2 {
+      color: var(--bg-white);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info-list {
+      margin-top: 25px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 200px;
+      background: #e5e7eb;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    /* ==========================================================================
+       FOOTER & BACK TO TOP
+       ========================================================================== */
+    .footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 70px 0 30px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer h4 {
+      color: var(--bg-white);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--bg-white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1f2937;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      background: var(--primary);
+      color: var(--bg-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-content h1 { font-size: 2.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .cards-grid, .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+      .principal-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .header-top { display: none; }
+      
+      .mobile-toggle { display: block; }
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: var(--shadow-md);
+        display: none;
+      }
+
+      .nav-menu.active { display: flex; }
+
+      .hero-grid, .about-grid, .admissions-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding: 40px 0 80px 0; }
+      .programs-grid, .gallery-grid, .features-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-top-content">
+        <div class="header-top-info">
+          <span>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Block 4, Gulshan-e-Iqbal, Karachi, Pakistan
+          </span>
+          <span>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            +92 300 1234567
+          </span>
+        </div>
+        <div>Office Hours: Mon - Sat (8:00 AM - 2:00 PM)</div>
+      </div>
+    </div>
+
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+        <div class="logo-text">
+          Karachi Scholars Academy
+          <span>Excellence in Education</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#academics" class="nav-link">Academics</a>
+        <a href="#programs" class="nav-link">Programs</a>
+        <a href="#admissions" class="nav-link">Admissions</a>
+        <a href="#faculty" class="nav-link">Faculty</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#admissions" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Nurturing Tomorrow's Leaders</span>
+        <h1>Building <span>Bright Futures</span> Through Quality Education</h1>
+        <p>Karachi Scholars Academy is committed to providing academic excellence, strong character development, and a supportive learning environment for students in Karachi.</p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">Explore Our School</a>
+          <a href="#admissions" class="btn btn-secondary">Admission Inquiry</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Pakistani school students studying together in a modern classroom" class="hero-image">
+        <div class="hero-decoration"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS HIGHLIGHTS -->
+  <div class="container stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1,500+</div>
+        <div class="stat-label">Enrolled Students</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">80+</div>
+        <div class="stat-label">Qualified Teachers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Academic Programs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Students engaged in a science class project" class="about-image">
+      </div>
+      <div class="about-text">
+        <span class="badge">About Our Academy</span>
+        <h2 class="section-title">Dedicated to Holistic Student Development</h2>
+        <p>Founded with a vision to revolutionize primary and secondary education in Karachi, Karachi Scholars Academy blends modern teaching methodologies with traditional values. We cultivate critical thinking, discipline, and creativity in every student.</p>
+        <p>Our safe campus and caring educators ensure that every child receives personalized attention to excel academically and personally.</p>
+
+        <div class="values-grid">
+          <div class="value-box">
+            <h4>Mission</h4>
+            <p style="font-size: 0.8rem; margin:0;">To empower young minds through comprehensive education.</p>
+          </div>
+          <div class="value-box">
+            <h4>Vision</h4>
+            <p style="font-size: 0.8rem; margin:0;">To lead as a center of educational excellence in Pakistan.</p>
+          </div>
+          <div class="value-box">
+            <h4>Core Values</h4>
+            <p style="font-size: 0.8rem; margin:0;">Integrity, Curiosity, Respect & Perseverance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAL'S MESSAGE -->
+  <section class="section-bg-cream">
+    <div class="container">
+      <div class="principal-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Dr. Ayesha Ahmed, Principal" class="principal-img">
+        <div class="principal-content">
+          <span class="badge">Principal's Message</span>
+          <h2 style="margin-bottom: 15px;">Welcome to Karachi Scholars Academy</h2>
+          <blockquote>
+            "At Karachi Scholars Academy, we believe education goes beyond textbooks. We prepare young people to meet tomorrow’s challenges with confidence, morality, and intellectual clarity. Our goal is to foster an environment where students feel safe to explore, question, and excel."
+          </blockquote>
+          <div class="principal-name">Dr. Ayesha Ahmed</div>
+          <div class="principal-title">Principal, Karachi Scholars Academy</div>
+          <div class="signature">Ayesha Ahmed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMICS -->
+  <section id="academics">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Academic Wings</span>
+        <h2 class="section-title">Structured Learning Pathways</h2>
+        <p class="section-subtitle">Tailored curriculum designed to support cognitive and personal growth at every educational stage.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="card-title">Early Years</h3>
+          <p class="card-desc">Play-based, sensory learning focus designed for toddlers to develop foundational social and physical skills.</p>
+          <a href="#admissions" class="btn btn-secondary" style="width: 100%;">Learn More</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="card-title">Primary School</h3>
+          <p class="card-desc">Strengthening literacy, numeracy, and basic scientific concepts through interactive classroom activities.</p>
+          <a href="#admissions" class="btn btn-secondary" style="width: 100%;">Learn More</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="card-title">Middle School</h3>
+          <p class="card-desc">Introducing analytical thinking, computer science, and structured co-curricular team activities.</p>
+          <a href="#admissions" class="btn btn-secondary" style="width: 100%;">Learn More</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="card-title">Secondary Education</h3>
+          <p class="card-desc">Rigorous academic prep for Matriculation / O-Levels with dedicated career guidance and counseling.</p>
+          <a href="#admissions" class="btn btn-secondary" style="width: 100%;">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES & PROGRAMS -->
+  <section id="programs" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Student Development</span>
+        <h2 class="section-title">Specialized Programs</h2>
+        <p class="section-subtitle">We go beyond standard textbooks to equip students with future-ready skills.</p>
+      </div>
+
+      <div class="programs-grid">
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">STEM & Robotics Lab</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Hands-on training in coding, basic electronics, and scientific experimentation.</p>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">Computer Education</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Modern IT labs teaching digital literacy, software skills, and internet safety.</p>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">Language Mastery</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Comprehensive English & Urdu language programs to enhance public speaking and writing skills.</p>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">Sports & Athletics</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Cricket, football, table tennis, and physical fitness instruction under expert coaches.</p>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">Arts & Creativity</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Painting, calligraphy, drama, and music programs designed to build creative expression.</p>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-content">
+            <h3 style="margin-bottom:10px;">Character Building</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Ethics, community service projects, and leadership workshops for personal growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS -->
+  <section id="admissions">
+    <div class="container">
+      <div class="admissions-grid">
+        <div>
+          <span class="badge">Join Our Family</span>
+          <h2 class="section-title">Admissions Open 2026-2027</h2>
+          <p style="color: var(--text-muted); margin-bottom: 25px;">We welcome applications from students who are eager to learn and grow. Follow our simple four-step process to apply.</p>
+
+          <div class="process-list">
+            <div class="process-item">
+              <div class="process-num">1</div>
+              <div>
+                <h4>Submit Inquiry</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted);">Fill out the online form or visit our admission office in Gulshan-e-Iqbal.</p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <div class="process-num">2</div>
+              <div>
+                <h4>Assessment & Interaction</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted);">A light evaluation for the child followed by an informal parental interaction.</p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <div class="process-num">3</div>
+              <div>
+                <h4>Document Verification</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted);">Submit Birth Certificate/B-Form, previous transcripts, and passport photographs.</p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <div class="process-num">4</div>
+              <div>
+                <h4>Final Enrollment</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted);">Pay the admission fee to confirm the desk seat for your child.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 style="margin-bottom: 20px;">Online Admission Inquiry</h3>
+          <div class="alert-success" id="admissionSuccess">
+            Thank you! Your inquiry has been submitted. Our admission team will contact you within 24 hours.
+          </div>
+          
+          <form id="admissionForm">
+            <div class="form-group">
+              <label for="studentName">Student Full Name *</label>
+              <input type="text" id="studentName" class="form-control" placeholder="e.g. Muhammad Ali" required>
+            </div>
+
+            <div class="form-group">
+              <label for="parentName">Parent / Guardian Name *</label>
+              <input type="text" id="parentName" class="form-control" placeholder="e.g. Tariq Khan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="gradeApplying">Class Applying For *</label>
+              <select id="gradeApplying" class="form-control" required>
+                <option value="">Select Grade</option>
+                <option value="early-years">Early Years / Nursery</option>
+                <option value="primary">Primary (Grade 1 - 5)</option>
+                <option value="middle">Middle School (Grade 6 - 8)</option>
+                <option value="secondary">Secondary (Matric / O-Levels)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number (WhatsApp) *</label>
+              <input type="tel" id="phone" class="form-control" placeholder="0300 1234567" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="parent@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Notes or Questions</label>
+              <textarea id="message" class="form-control" rows="3" placeholder="Any specific requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY -->
+  <section id="faculty" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Educators</span>
+        <h2 class="section-title">Qualified & Caring Teachers</h2>
+        <p class="section-subtitle">Meet our team of experienced educators dedicated to building student confidence.</p>
+      </div>
+
+      <div class="faculty-grid">
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Ayesha Ahmed" class="faculty-img">
+          <div class="faculty-info">
+            <div class="faculty-name">Dr. Ayesha Ahmed</div>
+            <div class="faculty-role">Principal & Founder</div>
+          </div>
+        </div>
+
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1580894732413-80c74900a066?auto=format&fit=crop&w=400&q=80" alt="Sara Khan" class="faculty-img">
+          <div class="faculty-info">
+            <div class="faculty-name">Sara Khan</div>
+            <div class="faculty-role">Head of Academics</div>
+          </div>
+        </div>
+
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Muhammad Ali" class="faculty-img">
+          <div class="faculty-info">
+            <div class="faculty-name">Muhammad Ali</div>
+            <div class="faculty-role">Senior Science Faculty</div>
+          </div>
+        </div>
+
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Hina Shah" class="faculty-img">
+          <div class="faculty-info">
+            <div class="faculty-name">Hina Shah</div>
+            <div class="faculty-role">English Language Lead</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Campus Life</span>
+        <h2 class="section-title">School Gallery</h2>
+        <p class="section-subtitle">A glimpse into the daily life, activities, and campus environment at KSA.</p>
+      </div>
+
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="campus">Campus</button>
+        <button class="filter-btn" data-filter="classrooms">Classrooms</button>
+        <button class="filter-btn" data-filter="activities">Activities</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="classrooms">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Modern Classroom">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+
+        <div class="gallery-item" data-category="activities">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Science Experiment">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+
+        <div class="gallery-item" data-category="campus">
+          <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="School Grounds">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+
+        <div class="gallery-item" data-category="activities">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80" alt="Group Discussion">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+
+        <div class="gallery-item" data-category="classrooms">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Computer Lab Session">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+
+        <div class="gallery-item" data-category="campus">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Students in Library">
+          <div class="gallery-overlay">View Photo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Enlarged gallery view" class="lightbox-content" id="lightboxImg">
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section-bg-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Distinction</span>
+        <h2 class="section-title">Why Parents Trust Us</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div style="color:var(--primary);">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h4>Safe & Secure Campus</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">24/7 CCTV monitoring, trained security guards, and controlled visitor access.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div style="color:var(--primary);">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h4>Affordable Fee Structure</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Providing premium educational facilities at accessible tuition costs.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div style="color:var(--primary);">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h4>Holistic Growth</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Balanced emphasis on sports, academics, character building, and religion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Parent Feedback</span>
+        <h2 class="section-title">What Parents Say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Enrolling my son at KSA was the best decision we made. His confidence and conversational English improved significantly within just six months."</p>
+          <div class="testimonial-author">Ahmed Raza</div>
+          <div class="demo-tag">Parent of Grade 4 Student</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The teachers are extraordinarily supportive and approachable. They provide individual attention to every child in class."</p>
+          <div class="testimonial-author">Sana Malik</div>
+          <div class="demo-tag">Parent of Nursery Student</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Extremely satisfied with the academic standards and character discipline taught at Karachi Scholars Academy."</p>
+          <div class="testimonial-author">Imran Hussain</div>
+          <div class="demo-tag">Parent of Grade 7 Student</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container" style="padding-top:0; padding-bottom: 60px;">
+    <div class="cta-section">
+      <h2>Give Your Child a Strong Start</h2>
+      <p style="max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9;">Discover a learning environment where knowledge, confidence, character, and creativity grow together.</p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="#admissions" class="btn btn-accent">Start Admission Inquiry</a>
+        <a href="#contact" class="btn btn-secondary" style="background: transparent; color: white; border-color: white;">Contact School</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-bg">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="badge">Get in Touch</span>
+          <h2 class="section-title">Contact Information</h2>
+          <p style="color: var(--text-muted);">Have questions regarding admissions, fee structures, or campus tours? Reach out to us directly.</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div>
+                <strong>Address:</strong><br>
+                Plot ST-4, Block 4, Gulshan-e-Iqbal, Karachi, Pakistan
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div>
+                <strong>Phone:</strong><br>
+                +92 300 1234567 / +92 21 34567890
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div>
+                <strong>Email:</strong><br>
+                info@karachischolarsacademy.edu.pk
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/923001234567" target="_blank" class="btn" style="background:#25D366; color:white; margin-top:15px;">
+            Chat on WhatsApp
+          </a>
+
+          <div class="map-placeholder">
+            Map Placeholder (Gulshan-e-Iqbal, Karachi)
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Send Us a Message</h3>
+          <p style="font-size:0.875rem; color:var(--text-muted); margin-bottom:20px;">We respond to all general inquiries within 1 business day.</p>
+          
+          <div class="alert-success" id="contactSuccess">
+            Your message has been sent successfully. Thank you!
+          </div>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="cName">Your Name *</label>
+              <input type="text" id="cName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cEmail">Email Address *</label>
+              <input type="email" id="cEmail" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cMessage">Message *</label>
+              <textarea id="cMessage" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom: 20px;">
+            <div class="logo-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <div class="logo-text" style="color:white;">
+              Karachi Scholars Academy
+            </div>
+          </div>
+          <p>Providing quality primary and secondary education in Karachi. Dedicated to academic excellence, leadership, and moral growth.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="#admissions">Process</a></li>
+            <li><a href="#admissions">Inquiry Form</a></li>
+            <li><a href="#admissions">Eligibility</a></li>
+            <li><a href="#contact">School Visits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <p style="margin-bottom:8px;">Block 4, Gulshan-e-Iqbal, Karachi</p>
+          <p style="margin-bottom:8px;">Phone: +92 300 1234567</p>
+          <p>Email: info@karachischolarsacademy.edu.pk</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Karachi Scholars Academy. All Rights Reserved.</div>
+        <div style="font-size: 0.8rem; opacity: 0.7;">Demo Website Concept</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="backToTop">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // 1. MOBILE NAVIGATION TOGGLE
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking on link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // 2. ACTIVE NAVIGATION ON SCROLL
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+
+        // Back To Top Visibility
+        const backToTop = document.getElementById('backToTop');
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      // Back to top scroll execution
+      document.getElementById('backToTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 3. ADMISSION FORM VALIDATION & SUBMISSION
+      const admissionForm = document.getElementById('admissionForm');
+      const admissionSuccess = document.getElementById('admissionSuccess');
+
+      admissionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        admissionSuccess.style.display = 'block';
+        admissionForm.reset();
+        setTimeout(() => {
+          admissionSuccess.style.display = 'none';
+        }, 6000);
+      });
+
+      // 4. CONTACT FORM VALIDATION & SUBMISSION
+      const contactForm = document.getElementById('contactForm');
+      const contactSuccess = document.getElementById('contactSuccess');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        contactSuccess.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => {
+          contactSuccess.style.display = 'none';
+        }, 6000);
+      });
+
+      // 5. GALLERY CATEGORY FILTERING
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 6. GALLERY LIGHTBOX MODAL
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const imgSrc = item.querySelector('img').getAttribute('src');
+          lightboxImg.setAttribute('src', imgSrc);
+          lightbox.style.display = 'flex';
+        });
+      });
+
+      lightboxClose.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
