@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVZE1XEVRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YVZE1XEVRK');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Dental Clinic | Dr. Ayesha Khan | Gulberg III, Lahore</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* CSS Variables & Global Resets */
+    :root {
+      --primary: #0284c7;       /* Dental Cyan/Blue */
+      --primary-dark: #0369a1;
+      --secondary: #0f172a;     /* Deep Navy */
+      --accent: #14b8a6;        /* Teal Highlight */
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Common Layout & Typography */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-header .tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(2, 132, 199, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: #ffffff;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1eb956;
+      transform: translateY(-2px);
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo i {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* 1. Hero Section */
+    .hero {
+      padding: 100px 0 80px 0;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 3.2rem;
+      line-height: 1.2;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* 2. About Doctor Section */
+    .about-doctor {
+      background-color: #ffffff;
+    }
+
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .doctor-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .doctor-info h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 5px;
+    }
+
+    .doctor-title {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .doctor-bio {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .doctor-qualifications {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .doctor-qualifications li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .doctor-qualifications i {
+      color: var(--accent);
+    }
+
+    /* 3. Treatments Section */
+    .treatments {
+      background-color: var(--light-bg);
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .treatment-card {
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .treatment-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(2, 132, 199, 0.1);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .treatment-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .treatment-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 4. Before & After Gallery */
+    .gallery {
+      background-color: #ffffff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      background: var(--light-bg);
+    }
+
+    .gallery-images {
+      display: flex;
+      position: relative;
+    }
+
+    .gallery-img-box {
+      width: 50%;
+      position: relative;
+    }
+
+    .gallery-img-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(15, 23, 42, 0.7);
+      color: #ffffff;
+      padding: 3px 10px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .gallery-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gallery-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+
+    /* 5. Patient Reviews */
+    .reviews {
+      background-color: var(--light-bg);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .review-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .stars {
+      color: #f59e0b;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    .review-text {
+      color: var(--text-dark);
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .patient-name {
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .patient-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* 6. Clinic Facilities */
+    .facilities {
+      background-color: #ffffff;
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .facility-item {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--light-bg);
+      border-radius: 16px;
+      transition: var(--transition);
+    }
+
+    .facility-item:hover {
+      background: rgba(2, 132, 199, 0.05);
+    }
+
+    .facility-icon {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .facility-item h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+
+    /* 7. Appointment Process */
+    .process {
+      background-color: var(--light-bg);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 auto 20px auto;
+    }
+
+    .process-step h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* 8. Pricing Cards */
+    .pricing {
+      background-color: #ffffff;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .pricing-card.popular {
+      border-color: var(--primary);
+      transform: scale(1.03);
+    }
+
+    .pricing-card.popular .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #ffffff;
+      padding: 4px 15px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .pricing-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pricing-features i {
+      color: var(--accent);
+    }
+
+    /* 9. FAQ Section */
+    .faq {
+      background-color: var(--light-bg);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      border: 1px solid var(--border-color);
+    }
+
+    .faq-question {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 10 & 11. Contact & Map Section */
+    .contact {
+      background-color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .contact-item i {
+      width: 45px;
+      height: 45px;
+      background: rgba(2, 132, 199, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--secondary);
+    }
+
+    .contact-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .map-placeholder {
+      background: #e2e8f0;
+      border-radius: 20px;
+      height: 100%;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #cbd5e1;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map-placeholder i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    /* 12. Footer */
+    footer {
+      background-color: var(--secondary);
+      color: #ffffff;
+      padding: 70px 0 25px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-about p {
+      color: #94a3b8;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 25px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-grid, .doctor-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Simplified for static single page */
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-tooth"></i> Bloom Dental
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About Doctor</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#gallery">Cases</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Gentle & Premium Dental Care in Lahore</h1>
+          <p>Experience pain-free dentistry, aesthetic smile makeovers, and advanced oral care led by Dr. Ayesha Khan at Bloom Dental Clinic.</p>
+          <div class="btn-group">
+            <button class="btn btn-primary">Book Appointment</button>
+            <button class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Clinic</button>
+            <button class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Dental Clinic Interior" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Doctor Section -->
+  <section id="about" class="about-doctor section-padding">
+    <div class="container">
+      <div class="doctor-grid">
+        <div class="doctor-image">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Ayesha Khan" />
+        </div>
+        <div class="doctor-info">
+          <div class="section-header" style="text-align: left; margin: 0 0 20px 0;">
+            <span class="tag">Lead Specialist</span>
+            <h2>Meet Dr. Ayesha Khan</h2>
+          </div>
+          <div class="doctor-title">BDS, FCPS (Cosmetic & Restorative Dentistry)</div>
+          <p class="doctor-bio">With over 12 years of clinical excellence, Dr. Ayesha Khan is dedicated to transforming smiles using state-of-the-art dental technology. She focuses on minimally invasive procedures and personalized patient care in a comfortable environment.</p>
+          <ul class="doctor-qualifications">
+            <li><i class="fa-solid fa-circle-check"></i> 12+ Years Clinical Experience</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certified Cosmetic Dentistry Specialist</li>
+            <li><i class="fa-solid fa-circle-check"></i> Member of Pakistan Medical & Dental Council (PMDC)</li>
+          </ul>
+          <div class="btn-group">
+            <button class="btn btn-primary">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Treatments Section -->
+  <section id="treatments" class="treatments section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Services</span>
+        <h2>Comprehensive Dental Treatments</h2>
+      </div>
+      <div class="treatment-grid">
+        <div class="treatment-card">
+          <div class="treatment-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Teeth Whitening</h3>
+          <p>Laser laser-assisted whitening treatments to brighten your smile up to 8 shades in a single visit.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Dental Veneers</h3>
+          <p>Custom porcelain and composite veneers to fix gaps, chips, and discoloration seamlessly.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon"><i class="fa-solid fa-tooth"></i></div>
+          <h3>Dental Implants</h3>
+          <p>Permanent titanium implant solutions that replace missing teeth with natural look and feel.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon"><i class="fa-solid fa-align-center"></i></div>
+          <h3>Invisalign & Braces</h3>
+          <p>Clear aligners and modern orthodontic braces to align teeth discreetly and comfortably.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Before & After Gallery -->
+  <section id="gallery" class="gallery section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Smile Gallery</span>
+        <h2>Real Patient Transformation</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-images">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=400&q=80" alt="Before whitening" />
+              <span class="gallery-label">Before</span>
+            </div>
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=400&q=80" alt="After whitening" />
+              <span class="gallery-label">After</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h3>Laser Teeth Whitening</h3>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-images">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=400&q=80" alt="Before veneers" />
+              <span class="gallery-label">Before</span>
+            </div>
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="After veneers" />
+              <span class="gallery-label">After</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h3>Porcelain Veneers Makeover</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Patient Reviews -->
+  <section class="reviews section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Testimonials</span>
+        <h2>What Our Patients Say</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"Dr. Ayesha Khan is incredibly gentle. I was always terrified of dentist appointments, but her team made my root canal completely painless!"</p>
+          <div class="patient-name">Fatima Ali</div>
+          <div class="patient-meta">Gulberg III, Lahore</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"Got my veneers done at Bloom Dental Clinic. The attention to detail and hygienic setup in their Gulberg clinic is world-class."</p>
+          <div class="patient-name">Usman Chaudhry</div>
+          <div class="patient-meta">Model Town, Lahore</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"Clean environment, modern equipment, and no waiting time. Highly recommend Dr. Ayesha for cosmetic dentistry."</p>
+          <div class="patient-name">Zainab Raza</div>
+          <div class="patient-meta">DHA Phase 5, Lahore</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Clinic Facilities -->
+  <section class="facilities section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Modern Infrastructure</span>
+        <h2>Our Clinic Facilities</h2>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-item">
+          <div class="facility-icon"><i class="fa-solid fa-pump-medical"></i></div>
+          <h3>Sterile & Hygienic</h3>
+          <p>Class-B autoclave sterilization exceeding global standards.</p>
+        </div>
+        <div class="facility-item">
+          <div class="facility-icon"><i class="fa-solid fa-x-ray"></i></div>
+          <h3>Digital 3D X-Ray</h3>
+          <p>Low-radiation intraoral cameras and digital radiography.</p>
+        </div>
+        <div class="facility-item">
+          <div class="facility-icon"><i class="fa-solid fa-couch"></i></div>
+          <h3>Pain-Free Suite</h3>
+          <p>Ergonomic dental chairs with relaxing environment.</p>
+        </div>
+        <div class="facility-item">
+          <div class="facility-icon"><i class="fa-solid fa-square-parking"></i></div>
+          <h3>Valet Parking</h3>
+          <p>Hassle-free parking right on MM Alam Road, Gulberg.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Appointment Process -->
+  <section class="process section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Easy Steps</span>
+        <h2>How to Book Your Visit</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Book Online or Call</h3>
+          <p>Select your preferred slot online or via phone/WhatsApp.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Consultation</h3>
+          <p>Meet Dr. Ayesha Khan for a thorough oral examination.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Personalized Plan</h3>
+          <p>Receive a clear treatment plan with transparent costs.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Treatment & Care</h3>
+          <p>Undergo gentle care and enjoy your renewed smile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Pricing Cards -->
+  <section id="pricing" class="pricing section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Transparent Cost</span>
+        <h2>Treatment Packages</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Consultation</h3>
+          <div class="price">PKR 2,000</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Complete Oral Checkup</li>
+            <li><i class="fa-solid fa-check"></i> Digital Intraoral Scan</li>
+            <li><i class="fa-solid fa-check"></i> Treatment Planning</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;">Book Appointment</button>
+        </div>
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Requested</div>
+          <h3>Teeth Cleaning</h3>
+          <div class="price">PKR 8,000</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Full Mouth Scaling</li>
+            <li><i class="fa-solid fa-check"></i> Ultrasonic Stain Removal</li>
+            <li><i class="fa-solid fa-check"></i> Fluoride Polishing</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;">Book Appointment</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Laser Whitening</h3>
+          <div class="price">PKR 25,000</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Single Session Whitening</li>
+            <li><i class="fa-solid fa-check"></i> Up to 8 Shades Whiter</li>
+            <li><i class="fa-solid fa-check"></i> Post-Treatment Kit</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;">Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ Section -->
+  <section class="faq section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Where is Bloom Dental Clinic located?</div>
+          <div class="faq-answer">We are conveniently located in Gulberg III, Lahore, easily accessible with ample parking space.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Are dental procedures painful?</div>
+          <div class="faq-answer">We prioritize patient comfort by utilizing modern local anesthetics and gentle techniques to ensure virtually pain-free treatments.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do I need an appointment before visiting?</div>
+          <div class="faq-answer">Prior appointments are recommended to eliminate waiting times, though emergency dental cases are accepted immediately.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 & 11. Contact & Location Map -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Get In Touch</span>
+        <h2>Visit or Contact Us</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h3>Reach Out to Our Desk</h3>
+          <p style="color: var(--text-muted); margin-bottom: 25px;">Book your slot or talk to our patient care team directly.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h4>Clinic Address</h4>
+                <p>Gulberg III, Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+92 42 3754 9180</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <h4>WhatsApp Support</h4>
+                <p>+92 320 845 7123</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h4>Email Address</h4>
+                <p>appointments@bloomdental.pk</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock"></i>
+              <div>
+                <h4>Clinic Hours</h4>
+                <p>Monday to Saturday: 10 AM to 8 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group" style="margin-top: 20px;">
+            <button class="btn btn-primary">Book Appointment</button>
+            <button class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Clinic</button>
+            <button class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- Location Map Placeholder -->
+        <div>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Location Map Placeholder</h3>
+            <p>Gulberg III, Lahore, Pakistan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo" style="color: #ffffff;">
+            <i class="fa-solid fa-tooth"></i> Bloom Dental
+          </a>
+          <p>Bloom Dental Clinic, led by Dr. Ayesha Khan, offers premier cosmetic and general dental solutions designed for comfort, aesthetics, and lasting health.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Dr. Ayesha</a></li>
+            <li><a href="#treatments">Our Treatments</a></li>
+            <li><a href="#gallery">Before & After</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Teeth Whitening</a></li>
+            <li><a href="#">Porcelain Veneers</a></li>
+            <li><a href="#">Root Canal Treatment</a></li>
+            <li><a href="#">Dental Implants</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Info</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 8px;">Gulberg III, Lahore, Pakistan</p>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 8px;">+92 42 3754 9180</p>
+          <p style="color: #94a3b8; font-size: 0.9rem;">appointments@bloomdental.pk</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bloom Dental Clinic. All Rights Reserved. Designed for Dr. Ayesha Khan.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

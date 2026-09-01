@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVZE1XEVRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YVZE1XEVRK');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Builders & Developers | Luxury Real Estate Islamabad</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis me">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* CSS Variables & Global Reset */
+    :root {
+      --primary: #0f172a;      /* Deep Navy */
+      --secondary: #1e293b;    /* Slate Dark */
+      --accent: #d4af37;       /* Royal Gold */
+      --accent-hover: #b89628;
+      --light-bg: #f8fafc;
+      --text-dark: #334155;
+      --text-muted: #64748b;
+      --white: #ffffff;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Common Typography & Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h4 {
+      font-family: var(--font-body);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-gold {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-gold:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-outline {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1eb956;
+    }
+
+    /* 1. Sticky Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* 2. Hero Section */
+    .hero {
+      position: relative;
+      height: calc(100vh - 80px);
+      min-height: 550px;
+      background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), 
+                  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero-subtitle {
+      color: var(--accent);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* 3. Company Introduction */
+    .intro {
+      background-color: var(--white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .intro-text h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .intro-text p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    /* 4. Featured Properties */
+    .properties {
+      background-color: var(--light-bg);
+    }
+
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .property-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+
+    .property-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .property-img {
+      position: relative;
+      height: 240px;
+    }
+
+    .property-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .property-tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .property-body {
+      padding: 25px;
+    }
+
+    .property-price {
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .property-title {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .property-location {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .property-features {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 15px;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+    }
+
+    /* 5. Why Choose Us */
+    .why-us {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .why-us .section-title h2 {
+      color: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .why-card {
+      background-color: rgba(255,255,255,0.03);
+      padding: 40px 30px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .why-card:hover {
+      border-color: var(--accent);
+    }
+
+    .why-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .why-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* 6. Our Services */
+    .services {
+      background-color: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      border: 1px solid #e2e8f0;
+      padding: 35px 25px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    /* 7. Timeline */
+    .timeline-section {
+      background-color: var(--light-bg);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #cbd5e1;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -8px;
+      background-color: var(--accent);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left { left: 0; }
+    .right { left: 50%; }
+
+    .right::after { left: -8px; }
+
+    .timeline-content {
+      padding: 20px;
+      background: var(--white);
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .timeline-content h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    /* 8. Statistics */
+    .stats {
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* 9. Testimonials */
+    .testimonials {
+      background-color: var(--white);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background-color: var(--light-bg);
+      padding: 30px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .quote-icon {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .client-info h4 {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .client-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* 10. FAQ */
+    .faq {
+      background-color: var(--light-bg);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* 11 & 12. Contact & Google Map Placeholder */
+    .contact {
+      background-color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info-list {
+      margin-top: 25px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .contact-info-item i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    .map-placeholder {
+      background-color: #e2e8f0;
+      border-radius: 8px;
+      height: 100%;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px;
+      border: 2px dashed #cbd5e1;
+    }
+
+    .map-placeholder i {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    /* 13. Professional Footer */
+    footer {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 70px 0 20px;
+      border-top: 3px solid var(--accent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-about p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links h4, .footer-contact-details h4 {
+      font-family: var(--font-heading);
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 5px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .intro-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .timeline::after {
+        left: 31px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-item::after {
+        left: 23px;
+      }
+      .right {
+        left: 0%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .header-actions {
+        display: none; /* Simplified for static layout */
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Sticky Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">ROYAL <span>BUILDERS</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="btn btn-outline">Book Consultation</button>
+        <button class="btn btn-gold">Call Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-subtitle">Redefining Luxury Living</p>
+        <h1 class="hero-title">Architectural Excellence in Islamabad</h1>
+        <p class="hero-description">Discover premier residential and commercial developments designed to international standards. Built with precision, luxury, and unmatched quality.</p>
+        <div class="hero-btns">
+          <button class="btn btn-gold">View Project</button>
+          <button class="btn btn-outline">Book Consultation</button>
+          <button class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Company Introduction -->
+  <section id="about" class="intro section-padding">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Royal Builders Office" />
+        </div>
+        <div class="intro-text">
+          <div class="section-title" style="text-align: left; margin-bottom: 20px;">
+            <h4>About Our Legacy</h4>
+            <h2>Royal Builders & Developers</h2>
+          </div>
+          <p>For over two decades, Royal Builders & Developers has been at the forefront of luxury real estate development in Islamabad. Headquartered in Blue Area, we specialize in high-end residential estates, luxury apartments, and commercial complexes.</p>
+          <p>Our commitment to modern engineering, transparent practices, and deadline-driven delivery has positioned us as one of the capital's most trusted development firms.</p>
+          <div style="margin-top: 30px;">
+            <button class="btn btn-gold">Book Consultation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Properties -->
+  <section id="properties" class="properties section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Exclusive Listings</h4>
+        <h2>Featured Projects</h2>
+      </div>
+      <div class="property-grid">
+        <!-- Card 1 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80" alt="Villa" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 12.5 Crore</div>
+            <div class="property-title">The Royal Enclave Villa</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector F-7, Islamabad</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-bed"></i> 6 Beds</span>
+              <span><i class="fa-solid fa-bath"></i> 7 Baths</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 1 Kanal</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">Under Construction</span>
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Apartments" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 3.2 Crore</div>
+            <div class="property-title">Margalla Heights Residency</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector E-11, Islamabad</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+              <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 2,200 Sq Ft</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">Commercial</span>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Tower" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 5.8 Crore</div>
+            <div class="property-title">Royal Business Square</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Blue Area, Islamabad</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-building"></i> Office Space</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 1,500 Sq Ft</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" alt="Luxury Home" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 22.0 Crore</div>
+            <div class="property-title">The Crown Modern Estate</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Golf City, Islamabad</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-bed"></i> 7 Beds</span>
+              <span><i class="fa-solid fa-bath"></i> 8 Baths</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 2 Kanal</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">Upcoming</span>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Modern Interior" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 1.8 Crore</div>
+            <div class="property-title">Pineview Luxury Suites</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Bhurban / Islamabad Suburbs</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-bed"></i> 2 Beds</span>
+              <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 1,100 Sq Ft</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-tag">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Residential Unit" />
+          </div>
+          <div class="property-body">
+            <div class="property-price">PKR 8.5 Crore</div>
+            <div class="property-title">Executive Park Avenue</div>
+            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Sector F-10, Islamabad</div>
+            <div class="property-features">
+              <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+              <span><i class="fa-solid fa-bath"></i> 6 Baths</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 10 Marla</span>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;">View Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us -->
+  <section class="why-us section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Our Value Proposition</h4>
+        <h2>Why Choose Royal Builders</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Uncompromising Quality</h3>
+          <p>We source premium structural materials and international fittings for every build.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-file-contract"></i></div>
+          <h3>100% Legal Clearance</h3>
+          <p>All projects strictly adhere to Capital Development Authority (CDA) approvals.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Timely Handover</h3>
+          <p>A proven track record of completing projects on or before specified deadlines.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h3>Transparent Pricing</h3>
+          <p>Zero hidden costs with flexible milestone-based payment plans tailored for investors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Our Services -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>End-to-End Expertise</h4>
+        <h2>Our Core Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3>Architectural Design</h3>
+          <p>Custom structural engineering and modern exterior architectural planning.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+          <h3>General Contracting</h3>
+          <p>Turnkey construction services for residential villas and commercial hubs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+          <h3>Interior Architecture</h3>
+          <p>Bespoke interior design, spatial planning, and high-end luxury styling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Construction Process Timeline -->
+  <section id="process" class="timeline-section section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Methodology</h4>
+        <h2>Our Construction Process</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>1. Consultation & Blueprinting</h3>
+            <p>Initial vision discussion, site evaluation, and complete architectural drafting.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>2. Approvals & Permitting</h3>
+            <p>Securing regulatory permissions, CDA approvals, and soil testing certifications.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>3. Core Construction</h3>
+            <p>Execution of foundational grey structure using premium grade steel and concrete.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>4. Finishing & Handover</h3>
+            <p>Fine detailing, interior fittings, final quality audit, and key handover.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Statistics -->
+  <section class="stats section-padding">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div>
+          <div class="stat-number">12M+</div>
+          <div class="stat-label">Sq Ft Developed</div>
+        </div>
+        <div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Client Feedback</h4>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Royal Builders delivered our F-7 villa ahead of schedule. Their attention to detail in finishing and modern styling is unmatched in Islamabad."</p>
+          <div class="client-info">
+            <h4>Tariq Malik</h4>
+            <span>Overseas Pakistani Investor</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Professional, transparent, and strict on quality. Booking our commercial office unit with them in Blue Area was the best investment decision."</p>
+          <div class="client-info">
+            <h4>Amina Shah</h4>
+            <span>Business Owner</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testimonial-text">"Extremely satisfied with their client communication. Their payment plans are straightforward without any hidden costs along the way."</p>
+          <div class="client-info">
+            <h4>Dr. Bilal Chaudhry</h4>
+            <span>Homeowner, E-11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="faq section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Got Questions?</h4>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Are all your residential projects CDA approved? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">Yes, all developments executed by Royal Builders strictly comply with CDA regulations and possess valid documentation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you offer flexible payment installment plans? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">We offer customized, milestone-based installment plans spanning 1 to 3 years depending on the project.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can Overseas Pakistanis book a property remotely? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">Absolutely. We provide virtual tours, online legal documentation, and dedicated representative assistance for overseas clients.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 & 12. Contact & Google Map Placeholder -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h4>Get In Touch</h4>
+        <h2>Contact Our Sales Team</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h3>Visit Our Head Office</h3>
+          <p class="text-muted">Schedule an in-person meeting with our property advisors to discuss your investment objectives.</p>
+          
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br />
+                Blue Area, Islamabad, Pakistan
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br />
+                +92 51 873 4589
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp:</strong><br />
+                +92 300 512 8890
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br />
+                info@royalbuilderspk.com
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Business Hours:</strong><br />
+                Monday to Saturday: 9 AM to 6 PM
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 25px; display: flex; gap: 10px;">
+            <button class="btn btn-gold">Book Consultation</button>
+            <button class="btn btn-outline">Call Now</button>
+          </div>
+        </div>
+        
+        <!-- Google Maps Placeholder -->
+        <div>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Interactive Map Placeholder</h3>
+            <p>Blue Area, Islamabad, Pakistan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Professional Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo">ROYAL <span>BUILDERS</span></a>
+          <p>Royal Builders & Developers is a premier luxury real estate firm headquartered in Islamabad. Dedicated to crafting architectural landmarks across residential and commercial sectors.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#process">Construction Process</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Residential Villas</a></li>
+            <li><a href="#">Commercial Towers</a></li>
+            <li><a href="#">Interior Architecture</a></li>
+            <li><a href="#">Project Management</a></li>
+            <li><a href="#">Property Valuation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-details">
+          <h4>Head Office</h4>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Blue Area, Islamabad, Pakistan</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 8px;">Ph: +92 51 873 4589</p>
+          <p style="color: #cbd5e1; font-size: 0.9rem;">Email: info@royalbuilderspk.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Royal Builders & Developers. All Rights Reserved. Designed for Luxury Real Estate in Islamabad.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

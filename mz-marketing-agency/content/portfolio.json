@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "id": "bloom-dental-clinic",
+      "title": "Bloom Dental Clinic",
+      "category": "Dental Clinic",
+      "location": "Lahore, Pakistan",
+      "description": "A calming, patient-first website for Dr. Ayesha Khan's dental practice, built around online appointment booking and a gentle, premium tone that puts nervous patients at ease.",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+      "link": "portfolio-demos/bloom-dental-clinic.html",
+      "featured": true
+    },
+    {
+      "id": "miller-co-law-firm",
+      "title": "Miller & Co. Law Firm",
+      "category": "Law Firm",
+      "location": "New York, USA",
+      "description": "A polished, authoritative website for a New York corporate and litigation practice, designed to build instant credibility with prospective clients searching for legal defense and guidance.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
+      "link": "portfolio-demos/miller-co-law-firm.html",
+      "featured": true
+    },
+    {
+      "id": "prime-auto-care",
+      "title": "Prime Auto Care",
+      "category": "Auto Workshop",
+      "location": "Rawalpindi, Pakistan",
+      "description": "A practical, service-focused website for Rawalpindi's automotive workshop, showcasing maintenance and repair services with a straightforward booking path for local car owners.",
+      "image": "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80",
+      "link": "portfolio-demos/prime-auto-care.html",
+      "featured": true
+    },
+    {
+      "id": "royal-builders-developers",
+      "title": "Royal Builders & Developers",
+      "category": "Real Estate",
+      "location": "Islamabad, Pakistan",
+      "description": "A high-end real estate website for an Islamabad developer, presenting luxury properties and architectural projects with the visual polish today's property buyers expect.",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "link": "portfolio-demos/royal-builders-developers.html",
+      "featured": false
+    },
+    {
+      "id": "sunline-solar-solutions",
+      "title": "Sunline Solar Solutions",
+      "category": "Solar Energy",
+      "location": "Dubai, UAE",
+      "description": "A conversion-focused website for a Dubai solar energy company, built to explain the value of solar installation clearly and turn interested homeowners and businesses into qualified leads.",
+      "image": "https://images.unsplash.com/photo-1548611716-3001859b7b90?auto=format&fit=crop&w=800&q=80",
+      "link": "portfolio-demos/sunline-solar-solutions.html",
+      "featured": false
+    }
+  ]
+}
