@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# IMPORTANT: if your GitHub repo's default branch is called "master" instead
+# of "main", change the line above to:  branch: master
+# See ADMIN-SETUP-INSTRUCTIONS.md for the full one-time setup steps.
+
+media_folder: "assets/images/uploads"
+public_folder: "assets/images/uploads"
+
+publish_mode: simple
+locale: "en"
+
+collections:
+
+  # ================== SITE CONTENT (Home / About / Services / Portfolio / Contact intros) ==================
+  - name: "site"
+    label: "🏠 Site Text & Contact Info"
+    files:
+      - file: "content/site.json"
+        label: "Edit Site Text & Contact Info"
+        name: "site"
+        fields:
+          - { label: "Home Page Hero", name: hero, widget: object, fields:
+              - { label: "Small tag above the headline", name: eyebrow, widget: string }
+              - { label: "Headline (first part)", name: title, widget: string }
+              - { label: "Headline (highlighted part)", name: title_accent, widget: string }
+              - { label: "Subheading paragraph", name: subtitle, widget: text }
+            }
+          - { label: "About Page", name: about, widget: object, fields:
+              - { label: "Page heading", name: intro_heading, widget: string }
+              - { label: "Page subheading", name: intro_subtitle, widget: string }
+              - { label: "'Our Story' heading", name: story_heading, widget: string }
+              - { label: "Story paragraph 1", name: story_p1, widget: text }
+              - { label: "Story paragraph 2", name: story_p2, widget: text }
+              - { label: "Story paragraph 3", name: story_p3, widget: text }
+            }
+          - { label: "Portfolio Page Intro", name: portfolio_intro, widget: object, fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Subheading", name: subtitle, widget: string }
+            }
+          - { label: "Services Page Intro", name: services_intro, widget: object, fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Subheading", name: subtitle, widget: string }
+            }
+          - { label: "Contact Page Intro", name: contact_intro, widget: object, fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Subheading", name: subtitle, widget: string }
+            }
+          - { label: "Founder / CEO Profile", name: founder, widget: object, fields:
+              - { label: "Full Name", name: name, widget: string }
+              - { label: "Job Title", name: position, widget: string }
+              - { label: "Profile Photo", name: photo, widget: image }
+            }
+          - { label: "Website Logo (Navigation + Footer)", name: logo, widget: image }
+          - { label: "Contact Details", name: contact, widget: object, fields:
+              - { label: "Email Address", name: email, widget: string }
+              - { label: "WhatsApp Number (digits only, country code, no + or spaces, e.g. 923001234567)", name: whatsapp_number, widget: string, pattern: ['^[0-9]+$', "Digits only, no spaces, no plus sign"] }
+              - { label: "Phone Number (as displayed on site, e.g. +92 300 1234567)", name: phone_display, widget: string }
+              - { label: "City / Location", name: location, widget: string }
+              - { label: "Facebook Page URL", name: facebook_url, widget: string }
+              - { label: "Instagram Page URL", name: instagram_url, widget: string }
+            }
+
+  # ================== SERVICES & PRICING ==================
+  - name: "services"
+    label: "🛠️ Services & Pricing"
+    files:
+      - file: "content/services.json"
+        label: "Manage Services"
+        name: "services"
+        fields:
+          - label: "Services List"
+            name: services
+            widget: list
+            summary: "{{title}} — {{price}}"
+            fields:
+              - { label: "Internal ID (do not change for existing services)", name: id, widget: string }
+              - { label: "Icon", name: icon, widget: select, options: [website, medical, legal, solar, portfolio, landing, static, responsive, speed, seo, form, whatsapp, generic] }
+              - { label: "Service Title", name: title, widget: string }
+              - { label: "Short Description", name: description, widget: text }
+              - { label: "Price (shown on the site, e.g. 'From $299' or 'Included')", name: price, widget: string }
+
+  # ================== AWARDS & ACHIEVEMENTS ==================
+  - name: "awards"
+    label: "🏆 Awards & Achievements"
+    files:
+      - file: "content/awards.json"
+        label: "Manage Awards"
+        name: "awards"
+        fields:
+          - label: "Awards List"
+            name: awards
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: "Award Title", name: title, widget: string }
+              - { label: "Year", name: year, widget: number, value_type: int, required: false }
+              - { label: "Short Description", name: description, widget: text, required: false }
+
+  # ================== PORTFOLIO PROJECTS ==================
+  - name: "portfolio"
+    label: "💼 Portfolio Projects"
+    files:
+      - file: "content/portfolio.json"
+        label: "Manage Portfolio Projects"
+        name: "portfolio"
+        fields:
+          - label: "Projects (also shown in the Home Page Featured Work section when 'Show on Home Page' is checked)"
+            name: projects
+            widget: list
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: "Internal ID (do not change for existing projects)", name: id, widget: string }
+              - { label: "Project / Business Name", name: title, widget: string }
+              - { label: "Category / Industry", name: category, widget: string }
+              - { label: "City, Country", name: location, widget: string }
+              - { label: "Short Description", name: description, widget: text }
+              - { label: "Thumbnail Image", name: image, widget: image }
+              - { label: "Live Preview Link (full https:// URL)", name: link, widget: string }
+              - { label: "Show on Home Page (Featured Work)", name: featured, widget: boolean, default: false }
+
+  # ================== THEME SWITCHER ==================
+  - name: "theme"
+    label: "🎨 Site Color Theme"
+    files:
+      - file: "content/theme.json"
+        label: "Choose Site Theme"
+        name: "theme"
+        fields:
+          - label: "Active Theme (changes colors across every page)"
+            name: active_theme
+            widget: select
+            options:
+              - { label: "Midnight Blue (default)", value: "midnight-blue" }
+              - { label: "Charcoal Orange", value: "charcoal-orange" }
+              - { label: "Slate Purple", value: "slate-purple" }
+              - { label: "Emerald Dark", value: "emerald-dark" }

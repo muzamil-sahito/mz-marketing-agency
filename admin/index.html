@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MZ Marketing Agency — Admin Panel</title>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<!-- Netlify Identity: handles the real, password-protected login for this Admin Panel -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  body{font-family:system-ui,-apple-system,sans-serif; background:#0A1A34; color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; text-align:center; padding:24px;}
+  .box{max-width:420px;}
+  .box img{width:56px; margin-bottom:18px;}
+  .box h1{font-size:1.3rem; margin-bottom:10px;}
+  .box p{color:#B9C4E0; font-size:.92rem; line-height:1.6;}
+  .box button{margin-top:18px; background:#FF6A2B; color:#fff; border:none; padding:12px 26px; border-radius:999px; font-weight:600; font-size:.95rem; cursor:pointer;}
+</style>
+</head>
+<body>
+  <div class="box" id="fallback">
+    <img src="../assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency">
+    <h1>MZ Marketing Agency Admin Panel</h1>
+    <p>Loading the secure login screen. If this message does not disappear, see <code>ADMIN-SETUP-INSTRUCTIONS.md</code> in the project for a one-time setup step required before this panel can be used.</p>
+    <button onclick="window.netlifyIdentity && window.netlifyIdentity.open()">Open Login</button>
+  </div>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<!-- Decap CMS engine (renders the actual dashboard once logged in) -->
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>
