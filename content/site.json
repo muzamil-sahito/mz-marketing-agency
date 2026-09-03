@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "eyebrow": "Website Development Agency",
+    "title": "Websites that make your business look",
+    "title_accent": "unmistakably professional.",
+    "subtitle": "MZ Marketing Agency designs and builds fast, modern, high-converting websites for businesses, clinics, law firms and solar companies, built to earn trust in the first three seconds."
+  },
+  "about": {
+    "intro_heading": "Built by a developer who understands what businesses actually need",
+    "intro_subtitle": "The story, the mission, and the person behind MZ Marketing Agency.",
+    "story_heading": "Our story",
+    "story_p1": "MZ Marketing Agency was founded in August 2024 with a simple observation: too many good businesses were being held back by outdated, slow or non-existent websites. Customers were searching for them online and either finding nothing, or finding something that didn't reflect the quality of the business behind it.",
+    "story_p2": "We set out to close that gap by building modern, responsive, high-converting websites that give businesses of every size a professional home online. From our first project, the focus has stayed the same: clean design, honest communication, and websites that are built to perform, not just look good on a screenshot.",
+    "story_p3": "Today, MZ Marketing Agency works with business owners, medical clinics, law firms and solar companies who want a website that actually earns its place in their marketing, one that loads fast, ranks well, and turns visitors into enquiries."
+  },
+  "portfolio_intro": {
+    "heading": "A look at our work",
+    "subtitle": "A selection of recent website projects built for real businesses across dental care, law, automotive, real estate and solar energy."
+  },
+  "services_intro": {
+    "heading": "Website development, built around your industry",
+    "subtitle": "From first-time business sites to specialised clinic, law firm and solar company websites. Every build is fast, responsive and SEO-ready from day one."
+  },
+  "contact_intro": {
+    "heading": "Let's build something great together",
+    "subtitle": "Tell us about your project and we'll get back to you within one business day."
+  },
+  "founder": {
+    "name": "Muzamil Hussain",
+    "position": "CEO & Founder",
+    "photo": "assets/images/founder-mz-marketing-agency.png"
+  },
+  "logo": "assets/images/logo-mz-marketing-agency.png",
+  "contact": {
+    "email": "mzmarketingservices1@gmail.com",
+    "whatsapp_number": "923703751051",
+    "phone_display": "+92 370 3751051",
+    "location": "Sukkur, Pakistan",
+    "facebook_url": "https://www.facebook.com/mzmarketingagnecy",
+    "instagram_url": "https://www.instagram.com/mz_marketing_official"
+  }
+}

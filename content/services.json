@@ -1,0 +1,16 @@
+{
+  "services": [
+    { "id": "svc-1", "icon": "website", "title": "Business Websites", "description": "Professional, brand-aligned websites that turn casual visitors into genuine enquiries and customers.", "price": "From $299" },
+    { "id": "svc-2", "icon": "medical", "title": "Medical Clinic Websites", "description": "Appointment-friendly, trust-building websites for clinics, dentists and healthcare practices.", "price": "From $349" },
+    { "id": "svc-3", "icon": "legal", "title": "Law Firm Websites", "description": "Authoritative, credible websites that reflect the professionalism of your practice.", "price": "From $349" },
+    { "id": "svc-4", "icon": "solar", "title": "Solar Company Websites", "description": "Modern, conversion-focused sites for solar and renewable energy businesses.", "price": "From $349" },
+    { "id": "svc-5", "icon": "portfolio", "title": "Portfolio Websites", "description": "Clean, visual-first websites for creatives, freelancers and personal brands.", "price": "From $199" },
+    { "id": "svc-6", "icon": "landing", "title": "Landing Pages", "description": "Single-page, high-conversion designs built for one clear goal: sign-ups or sales.", "price": "From $149" },
+    { "id": "svc-7", "icon": "static", "title": "Static Websites", "description": "Lightweight, secure and low-maintenance sites for simple informational needs.", "price": "From $129" },
+    { "id": "svc-8", "icon": "responsive", "title": "Responsive Websites", "description": "Pixel-perfect layouts that adapt smoothly across mobile, tablet and desktop.", "price": "Included" },
+    { "id": "svc-9", "icon": "speed", "title": "Fast Loading Websites", "description": "Optimised images, clean code and efficient builds for sub-second load times.", "price": "Included" },
+    { "id": "svc-10", "icon": "seo", "title": "SEO Friendly Websites", "description": "Proper structure, headings, metadata and speed built in to help you rank.", "price": "Included" },
+    { "id": "svc-11", "icon": "form", "title": "Contact Forms", "description": "Simple, spam-protected forms that route enquiries straight to your inbox.", "price": "Included" },
+    { "id": "svc-12", "icon": "whatsapp", "title": "WhatsApp Integration", "description": "A floating WhatsApp button so visitors can message you in one tap.", "price": "Included" }
+  ]
+}

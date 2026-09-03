@@ -1,0 +1,53 @@
+/* =========================================================
+   MZ MARKETING AGENCY — SITE THEMES
+   Controlled by the Admin Panel. The active theme name is
+   stored in content/theme.json and applied as a data-theme
+   attribute on <html> by js/theme-init.js + js/content-loader.js.
+   Every theme only overrides the same CSS custom properties
+   already used throughout css/style.css, so switching themes
+   re-colors every page without touching layout or typography.
+   ========================================================= */
+
+/* Theme 1: Midnight Blue (default — matches the original palette) */
+:root[data-theme="midnight-blue"]{
+  --navy:#0A1A34; --navy-2:#0F2347;
+  --blue:#2A5CFF; --blue-soft:#E7EDFF;
+  --orange:#FF6A2B; --orange-soft:#FFE7DA;
+  --ink:#101425; --slate:#5A6480; --slate-light:#8991AA;
+  --mist:#F4F6FB; --mist-2:#EDF0FA; --line:#E4E8F2;
+  --shadow-orange:0 14px 30px rgba(255,106,43,0.28);
+  --shadow-blue:0 14px 30px rgba(42,92,255,0.24);
+}
+
+/* Theme 2: Charcoal Orange */
+:root[data-theme="charcoal-orange"]{
+  --navy:#1C1C1E; --navy-2:#252527;
+  --blue:#C9832E; --blue-soft:#F5E7D3;
+  --orange:#FF6A2B; --orange-soft:#FFE2CC;
+  --ink:#1A1A1A; --slate:#6B6B6E; --slate-light:#9A9A9D;
+  --mist:#F6F5F3; --mist-2:#EFEDEA; --line:#E5E2DD;
+  --shadow-orange:0 14px 30px rgba(255,106,43,0.30);
+  --shadow-blue:0 14px 30px rgba(201,131,46,0.22);
+}
+
+/* Theme 3: Slate Purple */
+:root[data-theme="slate-purple"]{
+  --navy:#221933; --navy-2:#2E2245;
+  --blue:#8B5CF6; --blue-soft:#EDE6FE;
+  --orange:#FF6A2B; --orange-soft:#FFE7DA;
+  --ink:#1E1730; --slate:#665E7A; --slate-light:#948CA8;
+  --mist:#F6F4FB; --mist-2:#EFEAFA; --line:#E6E0F2;
+  --shadow-orange:0 14px 30px rgba(255,106,43,0.24);
+  --shadow-blue:0 14px 30px rgba(139,92,246,0.26);
+}
+
+/* Theme 4: Emerald Dark */
+:root[data-theme="emerald-dark"]{
+  --navy:#062B22; --navy-2:#0A382D;
+  --blue:#10B981; --blue-soft:#D6F5E8;
+  --orange:#F5B942; --orange-soft:#FDF0D2;
+  --ink:#0C1F19; --slate:#54756B; --slate-light:#84A69C;
+  --mist:#F2FAF7; --mist-2:#E7F5EF; --line:#DCEEE7;
+  --shadow-orange:0 14px 30px rgba(245,185,66,0.28);
+  --shadow-blue:0 14px 30px rgba(16,185,129,0.26);
+}

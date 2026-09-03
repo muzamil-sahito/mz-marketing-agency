@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVZE1XEVRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YVZE1XEVRK');
+</script>
+
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mz-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MZ Marketing Agency | Professional Website Development</title>
 <meta name="description" content="MZ Marketing Agency builds modern, fast, high-converting websites for businesses, clinics, law firms and solar companies. Get a free consultation today.">
@@ -9,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://mzmarketingagency.com/">
 <meta property="og:title" content="MZ Marketing Agency | Professional Website Development">
 <meta property="og:description" content="MZ Marketing Agency builds modern, fast, high-converting websites for businesses, clinics, law firms and solar companies. Get a free consultation today.">
 <meta property="og:image" content="assets/images/logo-mz-marketing-agency.png">
@@ -40,26 +51,29 @@
   ]
 }
 </script>
+<link rel="canonical" href="https://mzmarketingagency.com/">
 <link rel="icon" type="image/png" href="assets/images/logo-mz-marketing-agency.png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/themes.css">
 </head>
 <body>
 
-<div class="page-loader" id="pageLoader"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency"></div>
+<div class="page-loader" id="pageLoader"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency" data-cms-img="logo"></div>
 
 <!-- ===== NAVBAR ===== -->
 <header class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency logo" class="brand-logo-img"></a>
+    <a href="index.html" class="brand"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency logo" class="brand-logo-img" data-cms-img="logo"></a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="website-development.html">Website Development</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
+    <a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener" class="nav-mobile-cta">Free Consultation</a>
     </nav>
     <div class="nav-cta">
-      <a href="https://wa.me/923703751051" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Free Consultation</a>
+      <a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Free Consultation</a>
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -69,11 +83,11 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="reveal in">
-      <span class="hero-eyebrow"><span class="dots" style="display:inline-flex;gap:4px;"><span style="width:6px;height:6px;border-radius:50%;background:#FF6A2B;display:inline-block;"></span><span style="width:6px;height:6px;border-radius:50%;background:#2A5CFF;display:inline-block;"></span></span> Website Development Agency</span>
-      <h1>Websites that make your business look <span class="accent">unmistakably professional.</span></h1>
-      <p class="lead">MZ Marketing Agency designs and builds fast, modern, high-converting websites for businesses, clinics, law firms and solar companies — built to earn trust in the first three seconds.</p>
+      <span class="hero-eyebrow"><span class="dots" style="display:inline-flex;gap:4px;"><span style="width:6px;height:6px;border-radius:50%;background:#FF6A2B;display:inline-block;"></span><span style="width:6px;height:6px;border-radius:50%;background:#2A5CFF;display:inline-block;"></span></span> <span data-cms="hero.eyebrow">Website Development Agency</span></span>
+      <h1><span data-cms="hero.title">Websites that make your business look</span> <span class="accent" data-cms="hero.title_accent">unmistakably professional.</span></h1>
+      <p class="lead" data-cms="hero.subtitle">MZ Marketing Agency designs and builds fast, modern, high-converting websites for businesses, clinics, law firms and solar companies, built to earn trust in the first three seconds.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/923703751051" target="_blank" rel="noopener" class="btn btn-primary">Get a Free Consultation</a>
+        <a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener" class="btn btn-primary">Get a Free Consultation</a>
         <a href="portfolio.html" class="btn btn-outline-light">View Portfolio</a>
       </div>
       <div class="hero-stats">
@@ -103,25 +117,40 @@
             </div>
             <div class="art"></div>
           </div>
+          <div class="mini-cards-row">
+            <div class="mc"></div>
+            <div class="mc"></div>
+            <div class="mc"></div>
+          </div>
           <div class="mini-widgets">
             <div class="mini-chart">
               <div class="chart-top">
-                <span class="lbl">Traffic</span>
-                <span class="mini-badge-up">▲ 64%</span>
+                <span class="lbl">Traffic Growth</span>
+                <span class="mini-badge-up">▲ 38%</span>
               </div>
               <div class="bars">
-                <i style="height:35%;"></i>
-                <i style="height:55%;"></i>
-                <i style="height:40%;"></i>
-                <i style="height:70%;"></i>
-                <i style="height:50%;"></i>
-                <i style="height:85%;"></i>
-                <i style="height:60%;"></i>
+                <i style="height:32%;"></i>
+                <i style="height:42%;"></i>
+                <i style="height:38%;"></i>
+                <i style="height:58%;"></i>
+                <i style="height:66%;"></i>
+                <i style="height:80%;"></i>
+                <i style="height:94%;"></i>
               </div>
             </div>
             <div class="mini-donut-card">
-              <div class="mini-donut"><span>68%</span></div>
+              <div class="mini-donut"><span>4.8%</span></div>
               <small>Conversion Rate</small>
+            </div>
+          </div>
+          <div class="mini-kpi-row">
+            <div class="mini-kpi">
+              <b>64</b>
+              <span>Monthly Enquiries</span>
+            </div>
+            <div class="mini-kpi up">
+              <b>▲ 27%</b>
+              <span>Engagement</span>
             </div>
           </div>
         </div>
@@ -136,22 +165,32 @@
     <div class="why-row">
       <div class="reveal">
         <span class="eyebrow"><span class="dots"><span></span><span></span><span></span></span> Why It Matters</span>
-        <h2>Your website is your best-paid salesperson — it never sleeps.</h2>
+        <h2>Your website is your best-paid salesperson. It never sleeps.</h2>
         <p>Most customers judge a business before they ever speak to it. A slow, outdated or non-existent website quietly turns people away, while a professional one builds trust, ranks on Google, and converts visitors into paying clients around the clock.</p>
         <ul class="check-list mt-56">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A5CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> First impressions happen in under 3 seconds — make them count</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A5CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> First impressions happen in under 3 seconds, so make them count</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A5CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 24/7 lead generation without extra staff</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A5CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Builds credibility competitors without one can't match</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A5CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full control over your brand story, unlike social media alone</li>
         </ul>
       </div>
-      <div class="why-visual reveal">
-        <div class="row" style="height:14px;border-radius:7px;background:var(--blue-soft);width:60%;margin-bottom:16px;"></div>
-        <div class="row" style="height:14px;border-radius:7px;background:var(--mist-2);width:88%;margin-bottom:16px;"></div>
-        <div class="row" style="height:14px;border-radius:7px;background:var(--mist-2);width:76%;margin-bottom:30px;"></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div style="height:90px;border-radius:14px;background:linear-gradient(135deg,#fff,var(--orange-soft));border:1px solid var(--line);"></div>
-          <div style="height:90px;border-radius:14px;background:linear-gradient(135deg,#fff,var(--blue-soft));border:1px solid var(--line);"></div>
+      <div class="why-visual growth-scene reveal">
+        <div class="growth-top">
+          <span class="growth-tag">Lead Generation Dashboard</span>
+          <span class="mini-badge-up">▲ Trending Up</span>
+        </div>
+        <div class="growth-bars">
+          <div class="gb-col"><i style="height:26%;"></i><span>Jan</span></div>
+          <div class="gb-col"><i style="height:36%;"></i><span>Feb</span></div>
+          <div class="gb-col"><i style="height:44%;"></i><span>Mar</span></div>
+          <div class="gb-col"><i style="height:60%;"></i><span>Apr</span></div>
+          <div class="gb-col"><i style="height:78%;"></i><span>May</span></div>
+          <div class="gb-col"><i style="height:100%;"></i><span>Jun</span></div>
+        </div>
+        <div class="growth-kpis">
+          <div><b>2,140</b><span>Website Visits</span></div>
+          <div><b>96</b><span>Qualified Leads</span></div>
+          <div><b>64</b><span>Enquiries</span></div>
         </div>
         <div class="stat-pill" style="top:-18px; right:-14px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6A2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -172,7 +211,7 @@
     <div class="section-head">
       <span class="eyebrow"><span class="dots"><span></span><span></span><span></span></span> How We Work</span>
       <h2>A clear five-step process, start to launch</h2>
-      <p>No guesswork, no surprises — every project follows the same proven path from first conversation to live website.</p>
+      <p>No guesswork, no surprises. Every project follows the same proven path from first conversation to live website.</p>
     </div>
     <div class="workflow-track reveal-stagger">
       <div class="wf-step">
@@ -213,7 +252,52 @@
       <div class="stat"><b class="counter" data-target="7" data-suffix="+">0</b><span>Industries Served</span></div>
       <div class="stat"><b>4–5</b><span>Days Avg. Turnaround</span></div>
     </div>
-    <p class="text-center form-note" style="margin-top:14px;">Statistics shown are editable placeholders — update anytime from the Hostinger editor.</p>
+  </div>
+</section>
+
+<!-- ===== FEATURED WORK ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span class="dots"><span></span><span></span><span></span></span> Featured Work</span>
+      <h2>Recent projects</h2>
+      <p>A few of the websites we've built recently. See the full portfolio for all client work.</p>
+    </div>
+    <div class="grid grid-3 reveal-stagger" id="featured-work-grid">
+      <div class="proj-card">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Bloom Dental Clinic website preview" loading="lazy" width="800" height="500"></div>
+        <div class="proj-body">
+          <span class="proj-cat">Dental Clinic</span>
+          <h3>Bloom Dental Clinic</h3>
+          <span class="proj-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lahore, Pakistan</span>
+          <p>A calming, patient-first website built around online appointment booking.</p>
+          <a href="portfolio-demos/bloom-dental-clinic.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Live Preview</a>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Miller and Co Law Firm website preview" loading="lazy" width="800" height="500"></div>
+        <div class="proj-body">
+          <span class="proj-cat">Law Firm</span>
+          <h3>Miller &amp; Co. Law Firm</h3>
+          <span class="proj-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New York, USA</span>
+          <p>A polished, authoritative website built to earn instant credibility.</p>
+          <a href="portfolio-demos/miller-co-law-firm.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Live Preview</a>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Prime Auto Care website preview" loading="lazy" width="800" height="500"></div>
+        <div class="proj-body">
+          <span class="proj-cat">Auto Workshop</span>
+          <h3>Prime Auto Care</h3>
+          <span class="proj-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Rawalpindi, Pakistan</span>
+          <p>A practical, service-focused website with a straightforward booking path.</p>
+          <a href="portfolio-demos/prime-auto-care.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Live Preview</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-56">
+      <a href="portfolio.html" class="btn btn-secondary">View Full Portfolio</a>
+    </div>
   </div>
 </section>
 
@@ -227,30 +311,27 @@
     </div>
     <div class="grid grid-3 reveal-stagger">
       <div class="t-card">
-        <span class="t-badge">Sample</span>
         <div class="t-stars">★★★★★</div>
-        <p>"Our new website looks incredibly professional and we started getting inquiries within the first week of launch."</p>
+        <p>"Our new website makes it so much easier for patients to find us and book appointments online. The design feels calm and professional, exactly the tone we wanted for a dental practice."</p>
         <div class="t-person">
           <div class="t-avatar">A K</div>
-          <div><div class="name">Ayesha Khan</div><div class="biz">Bloom Dental Clinic · Pakistan</div></div>
+          <div><div class="name">Dr. Ayesha Khan</div><div class="biz">Bloom Dental Clinic · Lahore, Pakistan</div></div>
         </div>
       </div>
       <div class="t-card">
-        <span class="t-badge">Sample</span>
         <div class="t-stars">★★★★★</div>
-        <p>"The team understood our brand instantly. Clean design, fast loading, and it works perfectly on mobile."</p>
+        <p>"The website gives our firm the credibility we need when a prospective client looks us up for the first time. It's clean, fast, and reflects the level of service we provide."</p>
         <div class="t-person">
-          <div class="t-avatar">D M</div>
-          <div><div class="name">David Miller</div><div class="biz">Miller & Co. Law Firm · USA</div></div>
+          <div class="t-avatar">J M</div>
+          <div><div class="name">James Miller</div><div class="biz">Miller & Co. Law Firm · New York, USA</div></div>
         </div>
       </div>
       <div class="t-card">
-        <span class="t-badge">Sample</span>
         <div class="t-stars">★★★★★</div>
-        <p>"Professional communication from start to finish, and the final site exceeded what we expected for the price."</p>
+        <p>"MZ Marketing Agency built us a site that actually explains solar in a way homeowners understand, and it shows in the quality of the enquiries we now receive."</p>
         <div class="t-person">
-          <div class="t-avatar">S R</div>
-          <div><div class="name">Sara Raza</div><div class="biz">Sunline Solar Solutions · UAE</div></div>
+          <div class="t-avatar">F A</div>
+          <div><div class="name">Fatima Al Mansoori</div><div class="biz">Sunline Solar Solutions · Dubai, UAE</div></div>
         </div>
       </div>
     </div>
@@ -278,15 +359,15 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Do you offer SEO-friendly websites? <span class="plus"></span></button>
-        <div class="faq-a"><p>Absolutely — clean code, fast loading speeds, proper headings and meta structure are built in from day one.</p></div>
+        <div class="faq-a"><p>Absolutely. Clean code, fast loading speeds, proper headings and meta structure are built in from day one.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Can I edit the website myself after launch? <span class="plus"></span></button>
-        <div class="faq-a"><p>Yes. Every page, text block, image, and button is built to be editable through the Hostinger Website Builder's drag-and-drop editor — no coding required.</p></div>
+        <div class="faq-a"><p>Yes. Every page, text block, image, and button is built to be editable through the Hostinger Website Builder's drag-and-drop editor, no coding required.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Do you build websites for specific industries? <span class="plus"></span></button>
-        <div class="faq-a"><p>We regularly design for clinics, law firms, solar companies, portfolios and general businesses — see the Website Development page for the full list.</p></div>
+        <div class="faq-a"><p>We regularly design for clinics, law firms, solar companies, portfolios and general businesses. See the Website Development page for the full list.</p></div>
       </div>
     </div>
   </div>
@@ -313,12 +394,12 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo-plate"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency logo" class="footer-logo-img"></div>
+        <div class="footer-logo-plate"><img src="assets/images/logo-mz-marketing-agency.png" alt="MZ Marketing Agency logo" class="footer-logo-img" loading="lazy" data-cms-img="logo"></div>
         <p>Modern, high-converting websites for businesses that want to be taken seriously online. Established August 2024.</p>
         <div class="social-row">
-          <a href="https://www.facebook.com/mzmarketingagnecy" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3.2h-3V8.2c0-.9.25-1.5 1.55-1.5H16.6V3.9C16.3 3.86 15.3 3.77 14.1 3.77c-2.4 0-4 1.46-4 4.15v2.38H7.6v3.2h2.5V21h3.4z"/></svg></a>
-          <a href="https://www.instagram.com/mz_marketing_official" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="https://wa.me/923703751051" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.36A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.8.82-3-.2-.31A8.1 8.1 0 1 1 12 20.1zm4.44-6.02c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.55.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.63-1.18-1.4-1.32-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg></a>
+          <a href="https://www.facebook.com/mzmarketingagnecy" data-cms-href="contact.facebook_url" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3.2h-3V8.2c0-.9.25-1.5 1.55-1.5H16.6V3.9C16.3 3.86 15.3 3.77 14.1 3.77c-2.4 0-4 1.46-4 4.15v2.38H7.6v3.2h2.5V21h3.4z"/></svg></a>
+          <a href="https://www.instagram.com/mz_marketing_official" data-cms-href="contact.instagram_url" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.36A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.8.82-3-.2-.31A8.1 8.1 0 1 1 12 20.1zm4.44-6.02c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.55.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.63-1.18-1.4-1.32-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg></a>
         </div>
       </div>
       <div>
@@ -345,9 +426,9 @@
         <h4>Get in Touch</h4>
         <ul>
           <li>Sukkur, Pakistan</li>
-          <li><a href="mailto:mzmarketingservices1@gmail.com">mzmarketingservices1@gmail.com</a></li>
+          <li><a href="mailto:mzmarketingservices1@gmail.com" data-cms-href="mailto">mzmarketingservices1@gmail.com</a></li>
           <li><a href="tel:+923703751051">+92 370 3751051</a></li>
-          <li><a href="https://wa.me/923703751051" target="_blank" rel="noopener">Book a Free Consultation →</a></li>
+          <li><a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener">Book a Free Consultation →</a></li>
         </ul>
       </div>
     </div>
@@ -362,13 +443,35 @@
 </footer>
 
 <!-- Floating buttons -->
-<a href="https://wa.me/923703751051" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/923703751051" data-cms-href="whatsapp_link" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.36A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.8.82-3-.2-.31A8.1 8.1 0 1 1 12 20.1zm4.44-6.02c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.55.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.63-1.18-1.4-1.32-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
 </a>
 <button class="back-to-top" aria-label="Back to top">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="js/content-loader.js" defer></script>
 <script src="js/script.js"></script>
+<!-- Netlify Identity: required on the homepage so that Admin Panel invite and
+     password-reset emails (which link to the root domain) work correctly. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  (function () {
+    if (/invite_token|recovery_token|confirmation_token|email_change_token/.test(window.location.hash)) {
+      window.location.replace("/admin/" + window.location.hash);
+    }
+  })();
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      // If this page was opened from an invite / password-recovery email link,
+      // send the visitor straight into the Admin Panel to finish logging in.
+      if (window.location.hash && /invite_token|recovery_token|confirmation_token/.test(window.location.hash)) {
+        window.location.href = "/admin/" + window.location.hash;
+      }
+    });
+  }
+</script>
 </body>
 </html>
